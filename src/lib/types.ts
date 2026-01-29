@@ -23,3 +23,10 @@ export type SkillDomain = {
   subheadline: string;
   skills: ToolSkill[];
 }
+
+export type Experience = {
+  title: string;
+  timeframe: string;
+  description: string;
+  type: "organization" | "project";
+}

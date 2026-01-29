@@ -4,7 +4,7 @@ import { content } from "@/content/hero.copy"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen grid grid-cols-12 px-6">
+    <section className="relative min-h-screen grid grid-cols-12 px-6 md:px-12 lg:px-20 py-24">
       {/* Content */}
       <div className=" col-span-12 md:col-start-3 md:col-span-8 self-center text-center space-y-6">
         <h1>
