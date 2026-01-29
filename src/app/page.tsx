@@ -1,5 +1,10 @@
+import { HeroSection } from "@/sections";
+import { Fragment } from "react/jsx-runtime";
+
 export default function LandingPage() {
   return (
-    <h1 className="w-full flex items-center justify-center h-screen">Ivandry Portfolio</h1>
+    <Fragment>
+      <HeroSection />
+    </Fragment>
   );
 }
