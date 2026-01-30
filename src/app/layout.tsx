@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {   JetBrains_Mono, Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains',
@@ -36,9 +35,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${spaceGrostek.variable} antialiased`}
       >
-        <SmoothScrollProvider>
           {children}
-        </SmoothScrollProvider>
       </body>
     </html>
   );
