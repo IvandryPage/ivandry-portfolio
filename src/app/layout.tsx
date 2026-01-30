@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {   JetBrains_Mono, Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { LeftRail } from "@/components/composite/left-rail/LeftRail";
+import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains',
@@ -36,8 +36,9 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${spaceGrostek.variable} antialiased`}
       >
-        <LeftRail />
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

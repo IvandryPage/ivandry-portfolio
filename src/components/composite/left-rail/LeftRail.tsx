@@ -12,7 +12,7 @@ export function LeftRail() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.label}
-          className="transition hover:text-foreground-primary cursor-pointer rounded"
+          className="left-rail-item transition hover:text-foreground-primary cursor-pointer rounded"
         >
           <link.icon className="size-7"/>
         </Link>
