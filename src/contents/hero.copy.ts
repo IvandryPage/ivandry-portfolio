@@ -4,27 +4,9 @@ export const heroCopy = {
   title: {
     line1: "Frontend & Game",
     line2: "Developer",
-    line3: "(System-minded)",
+    line3: "—✦ neophyte" 
   },
 
   description:
-    "System-oriented developer with strong Git discipline. I build interactive web interfaces and game systems by prioritizing clarity, maintainability, and workflow correctness over visual noise.",
-
-  stats: [
-    {
-      label: "Primary Stack",
-      value: "React / Next.js",
-      colorVar: "--color-electric-blue",
-    },
-    {
-      label: "Game Tech",
-      value: "C++ / SFML",
-      colorVar: "--color-neon-pink",
-    },
-    {
-      label: "Workflow",
-      value: "Git-First Development",
-      colorVar: "--color-acid-green",
-    },
-  ],
+    "I bridge the gap between creative frontend experiences and rigorous game logic. Focused on Git-disciplined workflows and system-first development, I build software that scales by prioritizing structural integrity over ephemeral trends.",
 };

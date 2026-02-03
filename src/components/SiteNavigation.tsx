@@ -24,7 +24,7 @@ export function SiteNavigation() {
   return (
     <>
       {/* Floating Pill Navigation */}
-      <div className="fixed top-6 inset-x-0 z-[60] flex justify-center px-6 pointer-events-none">
+      <div className="fixed top-6 inset-x-0 z-60 flex justify-center px-6 pointer-events-none">
         <motion.nav
           style={{ scale: navScale, y: navY }}
           className={`

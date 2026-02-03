@@ -1,83 +1,45 @@
-import { Icon } from '@phosphor-icons/react'
-import {
-  EnvelopeSimpleIcon,
-  GithubLogoIcon,
-  InstagramLogoIcon,
-  LinkedinLogoIcon,
-  TwitterLogoIcon,
-} from '@phosphor-icons/react/dist/ssr'
+import { EnvelopeSimpleIcon, GithubLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
-export interface SocialLink {
-  label: string
-  icon: Icon
-  href: string
-  color: string
-}
-
-export interface QuickLink {
-  label: string
-  href: string
-}
 
 export const footerCopy = {
-  /* Identity */
-  owner: 'Galang Ivandry',
-
-  /* Contact */
+  owner: "Galang Ivandry",
   email: {
-    address: 'galang.ivandry@gmail.com', // pakai email personal, bukan brand
-    href: 'mailto:galang.ivandry@gmail.com',
+    address: "hello@ivandry.com", // Ganti dengan email aslimu
+    href: "mailto:hello@ivandry.com",
     icon: EnvelopeSimpleIcon,
-    color: 'var(--color-electric-blue)',
   },
-
-  /* Social proof */
   socialLinks: [
     {
-      label: "Linkedin",
-      icon: LinkedinLogoIcon,
-      href: 'https://linkedin.com/in/your-profile',
-      color: 'var(--color-neon-pink)',
-    },
-    {
-      label: "GitHub",
+      label: "Github",
+      href: "https://github.com/yourusername",
       icon: GithubLogoIcon,
-      href: 'https://github.com/your-username',
-      color: 'var(--color-cyber-purple)',
     },
     {
-      label: "Twitter",
-      icon: TwitterLogoIcon,
-      href: 'https://twitter.com/your-handle',
-      color: 'var(--color-electric-blue)',
+      label: "LinkedIn",
+      href: "https://linkedin.com/in/yourusername",
+      icon: LinkedinLogoIcon,
     },
     {
       label: "Instagram",
+      href: "https://instagram.com/yourusername",
       icon: InstagramLogoIcon,
-      href: 'https://twitter.com/your-handle',
-      color: 'var(--color-acid-green)',
     },
-  ] as SocialLink[],
-
-  /* Navigation */
+  ],
   quickLinks: [
-    { label: 'Works', href: '#works' },
-    { label: 'About', href: '#about' },
-    { label: 'Resume', href: '/resume.pdf' },
-  ] as QuickLink[],
-
-  /* Status */
+    { label: "Selected Works", href: "#works" },
+    { label: "About Identity", href: "#about" },
+    { label: "Start a Project", href: "#contact" },
+    { label: "Curriculum Vitae", href: "/cv.pdf" },
+  ],
   status: {
-    availability: 'Open for internship & junior opportunities',
+    availability: "Available for new projects",
     notes: [
-      'Frontend (React / Next.js)',
-      'Game programming fundamentals (C++ / SFML)',
+      "Based in Jakarta, ID",
+      "Current Focus: Creative Frontend & Design Systems"
     ],
   },
-
-  /* Legal / meta */
   legalLinks: [
-    { label: 'Privacy', href: '#' },
-    { label: 'RSS', href: '#' },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
   ],
-}
+};
