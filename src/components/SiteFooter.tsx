@@ -1,105 +1,105 @@
 'use client'
-import { motion } from "framer-motion";
-import { footerCopy } from "@/contents/footer.copy";
+
+import { motion } from 'framer-motion'
+import { footerCopy } from '@/contents/footer.copy'
 
 export function SiteFooter() {
-  const currentYear = new Date().getFullYear();
-  const MailIcon = footerCopy.email.icon;
+  const currentYear = new Date().getFullYear()
+  const MailIcon = footerCopy.email.icon
 
   return (
     <footer className="border-t border-white/10 py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+      {/* Subtle background — non-distracting */}
       <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at top left, var(--color-neon-pink), transparent 50%), radial-gradient(circle at bottom right, var(--color-electric-blue), transparent 50%)",
-        }}
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        // style={{
+        //   background:
+        //     'radial-gradient(circle at top left, var(--color-electric-blue), transparent 55%), radial-gradient(circle at bottom right, var(--color-neon-pink), transparent 55%)',
+        // }}
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
-          <div className="space-y-8">
+          <div className="space-y-10">
+            {/* Headline */}
             <motion.h2
-              className="text-[clamp(2rem,5vw,4rem)] leading-[1.05] tracking-[-0.02em] font-bold"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-[clamp(1.75rem,4vw,3rem)] leading-tight tracking-[-0.02em] font-semibold"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
-              <motion.span
+              <span className="text-white/90">
+                Interested in working together?
+              </span>
+              <br />
+              <span
                 style={{
                   background:
-                    "linear-gradient(135deg, var(--color-electric-blue), var(--color-cyber-purple))",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                    'linear-gradient(135deg, var(--color-electric-blue), var(--color-cyber-purple))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
                 }}
               >
-                Let&apos;s build
-              </motion.span>
-              <br />
-              <span className="text-white/90">something</span>
-              <br />
-              <motion.span
-                className="italic font-light"
-                style={{
-                  background:
-                    "linear-gradient(90deg, var(--color-neon-pink), var(--color-acid-green))",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                impossible
-              </motion.span>
+                Let’s talk.
+              </span>
             </motion.h2>
 
+            {/* Contact */}
             <motion.a
               href={footerCopy.email.href}
-              className="inline-flex items-center gap-3 text-lg group"
-              whileHover={{ x: 8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              className="inline-flex items-center gap-3 text-base text-white/80"
+              whileHover={{ x: 6 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
-              <MailIcon size={20} weight="duotone" style={{ color: footerCopy.email.color }} />
-              <span style={{ color: footerCopy.email.color }}>
-                {footerCopy.email.address}
-              </span>
+              <MailIcon
+                size={18}
+                weight="duotone"
+                style={{ color: footerCopy.email.color }}
+              />
+              <span>{footerCopy.email.address}</span>
             </motion.a>
 
-            <div className="flex gap-6 pt-4">
+            {/* Social */}
+            <div className="flex gap-5 pt-2">
               {footerCopy.socialLinks.map((social, index) => {
-                const Icon = social.icon;
+                const Icon = social.icon
                 return (
                   <motion.a
                     key={index}
                     href={social.href}
-                    className="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center"
+                    aria-label={social.label}
+                    className="w-11 h-11 border border-white/15 rounded-md flex items-center justify-center"
                     whileHover={{
-                      scale: 1.1,
+                      scale: 1.08,
                       borderColor: social.color,
-                      boxShadow: `0 0 20px ${social.color}40`,
                     }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <Icon size={20} weight="duotone" style={{ color: social.color }} />
+                    <Icon
+                      size={18}
+                      weight="duotone"
+                      style={{ color: social.color }}
+                    />
                   </motion.a>
-                );
+                )
               })}
             </div>
           </div>
 
           {/* Right */}
-          <div className="grid grid-cols-2 gap-12 pt-8">
+          <div className="grid grid-cols-2 gap-12 pt-4">
+            {/* Links */}
             <div className="space-y-6">
-              <h3
-                className="text-xs tracking-[0.2em] uppercase font-medium"
-                style={{ color: "var(--color-neon-pink)" }}
-              >
-                QUICK LINKS
+              <h3 className="text-xs tracking-[0.2em] uppercase text-white/40">
+                Navigation
               </h3>
-              {footerCopy.quickLinks.map((link) => (
+              {footerCopy.quickLinks.map(link => (
                 <motion.a
                   key={link.label}
                   href={link.href}
-                  className="block text-white/70 hover:text-white"
+                  className="block text-sm text-white/65 hover:text-white"
                   whileHover={{ x: 4 }}
                 >
                   {link.label}
@@ -107,28 +107,26 @@ export function SiteFooter() {
               ))}
             </div>
 
+            {/* Status */}
             <div className="space-y-6">
-              <h3
-                className="text-xs tracking-[0.2em] uppercase font-medium"
-                style={{ color: "var(--color-acid-green)" }}
-              >
-                STATUS
+              <h3 className="text-xs tracking-[0.2em] uppercase text-white/40">
+                Current Status
               </h3>
 
               <div className="flex items-center gap-2">
                 <motion.div
                   className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: "var(--color-acid-green)" }}
-                  animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  style={{ backgroundColor: 'var(--color-acid-green)' }}
+                  animate={{ opacity: [1, 0.4, 1] }}
+                  transition={{ duration: 1.8, repeat: Infinity }}
                 />
-                <span className="text-sm text-white/60">
+                <span className="text-sm text-white/65">
                   {footerCopy.status.availability}
                 </span>
               </div>
 
               {footerCopy.status.notes.map((line, i) => (
-                <p key={i} className="text-sm text-white/60">
+                <p key={i} className="text-sm text-white/55">
                   {line}
                 </p>
               ))}
@@ -137,32 +135,24 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom */}
-        <motion.div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
+        <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
           <p className="text-xs text-white/40">
-            © {currentYear} Pixel Alchemist. Handcrafted with{" "}
-            <motion.span
-              style={{ color: "var(--color-neon-pink)" }}
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              ♥
-            </motion.span>{" "}
-            and excessive caffeine.
+            © {currentYear} {footerCopy.owner}. All rights reserved.
           </p>
 
           <div className="flex gap-8 text-xs text-white/40">
-            {footerCopy.legalLinks.map((link) => (
+            {footerCopy.legalLinks.map(link => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                whileHover={{ color: "var(--color-electric-blue)" }}
+                whileHover={{ color: 'var(--color-electric-blue)' }}
               >
                 {link.label}
               </motion.a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </footer>
-  );
+  )
 }

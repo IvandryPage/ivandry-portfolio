@@ -1,73 +1,83 @@
-// import {
-//   EnvelopeSimpleIcon,
-//   TwitterLogoIcon,
-//   LinkedinLogoIcon,
-//   GithubLogoIcon,
-//   SparkleIcon,
-// } from '@phosphor-icons/react'
-import type { Icon } from "@phosphor-icons/react";
-import { EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, SparkleIcon, TwitterLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import { Icon } from '@phosphor-icons/react'
+import {
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  InstagramLogoIcon,
+  LinkedinLogoIcon,
+  TwitterLogoIcon,
+} from '@phosphor-icons/react/dist/ssr'
 
 export interface SocialLink {
-  icon: Icon;
-  href: string;
-  color: string;
+  label: string
+  icon: Icon
+  href: string
+  color: string
 }
 
 export interface QuickLink {
-  label: string;
-  href: string;
+  label: string
+  href: string
 }
 
 export const footerCopy = {
+  /* Identity */
+  owner: 'Galang Ivandry',
+
+  /* Contact */
   email: {
-    address: "hello@pixelalchemist.dev",
-    href: "mailto:hello@pixelalchemist.dev",
+    address: 'galang.ivandry@gmail.com', // pakai email personal, bukan brand
+    href: 'mailto:galang.ivandry@gmail.com',
     icon: EnvelopeSimpleIcon,
-    color: "var(--color-electric-blue)",
+    color: 'var(--color-electric-blue)',
   },
 
+  /* Social proof */
   socialLinks: [
     {
-      icon: TwitterLogoIcon,
-      href: "#",
-      color: "var(--color-electric-blue)",
-    },
-    {
+      label: "Linkedin",
       icon: LinkedinLogoIcon,
-      href: "#",
-      color: "var(--color-neon-pink)",
+      href: 'https://linkedin.com/in/your-profile',
+      color: 'var(--color-neon-pink)',
     },
     {
+      label: "GitHub",
       icon: GithubLogoIcon,
-      href: "#",
-      color: "var(--color-cyber-purple)",
+      href: 'https://github.com/your-username',
+      color: 'var(--color-cyber-purple)',
     },
     {
-      icon: SparkleIcon,
-      href: "#",
-      color: "var(--color-acid-green)",
+      label: "Twitter",
+      icon: TwitterLogoIcon,
+      href: 'https://twitter.com/your-handle',
+      color: 'var(--color-electric-blue)',
+    },
+    {
+      label: "Instagram",
+      icon: InstagramLogoIcon,
+      href: 'https://twitter.com/your-handle',
+      color: 'var(--color-acid-green)',
     },
   ] as SocialLink[],
 
+  /* Navigation */
   quickLinks: [
-    { label: "Works", href: "#works" },
-    { label: "About", href: "#about" },
-    { label: "Resume", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: 'Works', href: '#works' },
+    { label: 'About', href: '#about' },
+    { label: 'Resume', href: '/resume.pdf' },
   ] as QuickLink[],
 
+  /* Status */
   status: {
-    availability: "Currently available",
+    availability: 'Open for internship & junior opportunities',
     notes: [
-      "Open to experimental projects & wild ideas",
-      "Based in the digital void (remote-first)",
+      'Frontend (React / Next.js)',
+      'Game programming fundamentals (C++ / SFML)',
     ],
   },
 
+  /* Legal / meta */
   legalLinks: [
-    { label: "Privacy", href: "#" },
-    { label: "Terms", href: "#" },
-    { label: "RSS", href: "#" },
+    { label: 'Privacy', href: '#' },
+    { label: 'RSS', href: '#' },
   ],
-};
+}

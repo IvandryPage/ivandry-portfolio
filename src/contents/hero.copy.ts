@@ -1,5 +1,5 @@
 export const heroCopy = {
-  overline: "SYSTEM BUILD MODE / 2026",
+  overline: "SYSTEM-ORIENTED DEVELOPER / 2026",
 
   title: {
     line1: "Frontend & Game",

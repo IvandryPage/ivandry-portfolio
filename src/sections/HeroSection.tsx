@@ -18,13 +18,14 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.15, duration: 0.5 }}
-            className="text-accent"
+            className="text-foreground-secondary"
           >
             {heroCopy.overline}
           </motion.p>
 
           {/* Title */}
           <motion.h1
+            suppressHydrationWarning
             className="
               font-medium tracking-[-0.035em]
               leading-[0.9]
@@ -52,6 +53,7 @@ export function HeroSection() {
 
             {/* Editorial accent */}
             <span
+              suppressHydrationWarning
               className="
                 block italic font-light
                 text-[0.75em] leading-[1.1]
@@ -113,7 +115,7 @@ export function HeroSection() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-12 bg-gradient-to-b from-transparent via-border to-transparent"
+          className="w-px h-12 bg-linear-to-b from-transparent via-border to-transparent"
         />
       </motion.div>
     </section>
