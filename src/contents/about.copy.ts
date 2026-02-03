@@ -27,6 +27,30 @@ export const aboutCopy = {
       description: '...',
       color: '#00d4ff' // Direct hex, bukan CSS var
     },
+    {
+      period: '2024—Present',
+      title: 'Senior Product Designer',
+      description: '...',
+      color: '#00d4ff' // Direct hex, bukan CSS var
+    },
+    {
+      period: '2024—Present',
+      title: 'Senior Product-Designer',
+      description: '...',
+      color: '#00d4ff' // Direct hex, bukan CSS var
+    },
+    {
+      period: '2024—Present',
+      title: 'Senior-Product Designer',
+      description: '...',
+      color: '#00d4ff' // Direct hex, bukan CSS var
+    },
+    {
+      period: '2024—Present',
+      title: 'Senior Product Designer-',
+      description: '...',
+      color: '#00d4ff' // Direct hex, bukan CSS var
+    },
     // ...
   ]
 }

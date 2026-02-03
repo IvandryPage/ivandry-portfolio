@@ -3,164 +3,124 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const NAV_ITEMS = [
-  { label: 'Works', href: '#works', color: 'var(--color-electric-blue)' },
-  { label: 'About', href: '#about', color: 'var(--color-neon-pink)' },
-  { label: 'Contact', href: '#contact', color: 'var(--color-acid-green)' },
+  { label: 'Works', href: '#works' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export function SiteNavigation() {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 100], [0, 1])
-
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
+  // Transformasi untuk mengecilkan nav saat scroll
+  const navScale = useTransform(scrollY, [0, 100], [1, 0.9])
+  const navY = useTransform(scrollY, [0, 100], [0, 10])
+
   useEffect(() => {
-    return scrollY.on('change', v => setIsScrolled(v > 100))
+    return scrollY.on('change', v => setIsScrolled(v > 50))
   }, [scrollY])
 
   return (
     <>
-      {/* ================= Desktop / Base Navigation ================= */}
-      <motion.nav
-        suppressHydrationWarning 
-        style={{ opacity }}
-        className="
-          fixed top-0 inset-x-0 z-50
-          px-6 md:px-12 lg:px-24 py-6
-          backdrop-blur-md bg-background/60
-          border-b border-white/10
-        "
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Brand */}
+      {/* Floating Pill Navigation */}
+      <div className="fixed top-6 inset-x-0 z-[60] flex justify-center px-6 pointer-events-none">
+        <motion.nav
+          style={{ scale: navScale, y: navY }}
+          className={`
+            pointer-events-auto
+            relative flex items-center justify-between
+            px-6 py-3 rounded-full
+            border border-border/50
+            transition-all duration-500 ease-[0.22, 1, 0.36, 1]
+            ${isScrolled 
+              ? 'bg-background-surface/80 shadow-[0_8px_32px_rgba(0,0,0,0.4)] w-full max-w-md' 
+              : 'bg-transparent border-transparent w-full max-w-7xl'}
+          `}
+        >
+          {/* Noise Texture Overlay (Pengganti Blur) */}
+          {isScrolled && (
+            <div className="absolute inset-0 rounded-full opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          )}
+
+          {/* Logo / Brand */}
           <motion.a
             href="#"
-            className="text-sm tracking-wide font-medium"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-electric-blue), var(--color-neon-pink))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-            whileHover={{ opacity: 0.85 }}
+            className="text-[10px] tracking-[0.4em] font-bold text-foreground"
           >
-            GALANG IVANDRY
+            IVANDRY<span className="text-brand">.</span>
           </motion.a>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex gap-8 text-sm">
+          {/* Desktop Links - Minimalist Pill */}
+          <div className="hidden md:flex items-center gap-1">
             {NAV_ITEMS.map(link => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                className="text-white/70 font-medium relative"
-                whileHover={{ y: -2, color: link.color }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                className="px-4 py-1.5 text-[10px] tracking-widest uppercase text-foreground-secondary hover:text-brand transition-colors rounded-full relative group"
               >
-                {link.label}
+                <span className="relative z-10">{link.label}</span>
+                <motion.div 
+                  className="absolute inset-0 bg-brand/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                />
               </motion.a>
             ))}
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-xs tracking-[0.3em] uppercase text-white/70"
             onClick={() => setIsOpen(true)}
+            className="md:hidden flex flex-col gap-1 px-2"
           >
-            Menu
+            <div className="w-4 h-[1px] bg-brand" />
+            <div className="w-4 h-[1px] bg-foreground-muted" />
           </button>
-        </div>
-      </motion.nav>
+        </motion.nav>
+      </div>
 
-      {/* ================= Initial Floating Identity ================= */}
-      <motion.div
-        className="fixed top-6 left-6 md:left-12 lg:left-24 z-40 pointer-events-none"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: isScrolled ? 0 : 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.div
-          className="text-xs tracking-[0.25em] uppercase font-medium"
-          style={{
-            background:
-              'linear-gradient(90deg, var(--color-cyber-purple), var(--color-acid-green))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-          animate={{
-            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
-        >
-          IVANDRY
-        </motion.div>
-      </motion.div>
-
-      {/* ================= Fullscreen Mobile Navigation ================= */}
+      {/* Fullscreen Overlay Menu - Ultra Fancy */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="
-              fixed inset-0 z-[100]
-              bg-background
-              flex flex-col
-            "
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-background flex items-center justify-center"
+            initial={{ clipPath: 'circle(0% at 90% 5%)' }}
+            animate={{ clipPath: 'circle(150% at 90% 5%)' }}
+            exit={{ clipPath: 'circle(0% at 90% 5%)' }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Background Accent */}
-            <motion.div
-              className="absolute inset-0 opacity-20"
-              style={{
-                background:
-                  'radial-gradient(circle at top right, var(--color-electric-blue), transparent 60%)',
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.25 }}
-            />
+            {/* Minimalist Close Button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-10 right-10 text-[10px] tracking-[0.5em] text-foreground-muted hover:text-brand uppercase"
+            >
+              Close [×]
+            </button>
 
-            {/* Header */}
-            <div className="relative flex justify-between items-center px-6 py-6">
-              <span className="text-xs tracking-[0.3em] uppercase text-white/50">
-                Navigation
-              </span>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-xs tracking-[0.3em] uppercase text-white/70"
-              >
-                Close
-              </button>
-            </div>
-
-            {/* Nav Items */}
-            <div className="relative flex-1 flex flex-col justify-center px-6">
+            {/* Vertical Large Links */}
+            <div className="flex flex-col gap-8 text-center">
               {NAV_ITEMS.map((item, i) => (
                 <motion.a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-[clamp(2.5rem,10vw,4.5rem)] font-bold leading-none"
-                  style={{
-                    color: item.color,
-                  }}
-                  initial={{ y: 40, opacity: 0 }}
+                  className="group relative overflow-hidden"
+                  initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    delay: 0.1 + i * 0.08,
-                    duration: 0.6,
-                    ease: 'easeOut',
-                  }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
                 >
-                  {item.label}
+                  <span className="block text-5xl md:text-8xl font-medium tracking-tighter text-foreground group-hover:italic group-hover:text-brand transition-all duration-500">
+                    {item.label}
+                  </span>
+                  {/* Diagonal Line Hover */}
+                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-brand translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500" />
                 </motion.a>
               ))}
             </div>
 
-            {/* Footer */}
-            <div className="relative px-6 py-8 text-xs text-white/40">
-              Designing systems, interactions, and experiences.
+            {/* Bottom Info */}
+            <div className="absolute bottom-12 flex gap-12 text-[9px] tracking-[0.3em] uppercase text-foreground-muted font-mono">
+              <span>Jakarta / 2026</span>
+              <span className="text-brand">Available for work</span>
             </div>
           </motion.div>
         )}

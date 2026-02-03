@@ -2,153 +2,127 @@
 
 import { motion } from 'framer-motion'
 import { footerCopy } from '@/contents/footer.copy'
+import Link from 'next/link'
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()
   const MailIcon = footerCopy.email.icon
 
   return (
-    <footer className="border-t border-white/10 py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      {/* Subtle background — non-distracting */}
-      <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
-        // style={{
-        //   background:
-        //     'radial-gradient(circle at top left, var(--color-electric-blue), transparent 55%), radial-gradient(circle at bottom right, var(--color-neon-pink), transparent 55%)',
-        // }}
-      />
-
+    <footer className="relative bg-background pt-40 pb-12 px-6 md:px-12 lg:px-24 overflow-hidden border-t border-border/50">
+      {/* Background Noise Texture */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left */}
-          <div className="space-y-10">
-            {/* Headline */}
-            <motion.h2
-              className="text-[clamp(1.75rem,4vw,3rem)] leading-tight tracking-[-0.02em] font-semibold"
-              initial={{ opacity: 0, y: 16 }}
+        <div className="grid lg:grid-cols-12 gap-16">
+          
+          {/* Left Side: BIG CTA */}
+          <div className="lg:col-span-7 space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-4"
             >
-              <span className="text-white/90">
-                Interested in working together?
+              <span className="text-[10px] tracking-[0.5em] uppercase text-brand font-bold">
+                Get in Touch
               </span>
-              <br />
-              <span
-                style={{
-                  background:
-                    'linear-gradient(135deg, var(--color-electric-blue), var(--color-cyber-purple))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Let’s talk.
-              </span>
-            </motion.h2>
+              <h2 className="text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] tracking-[-0.05em] font-medium text-foreground">
+                Let’s create <br /> 
+                <span className="italic font-light text-foreground-secondary/60">something</span> <br />
+                <span style={{ 
+                  background: "linear-gradient(135deg, var(--brand), var(--color-warm-amber))",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}>meaningful.</span>
+              </h2>
+            </motion.div>
 
-            {/* Contact */}
             <motion.a
               href={footerCopy.email.href}
-              className="inline-flex items-center gap-3 text-base text-white/80"
-              whileHover={{ x: 6 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              className="group inline-flex items-center gap-6 text-xl md:text-2xl font-light text-foreground-secondary hover:text-brand transition-colors duration-500"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
             >
-              <MailIcon
-                size={18}
-                weight="duotone"
-                style={{ color: footerCopy.email.color }}
-              />
-              <span>{footerCopy.email.address}</span>
+              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:border-brand group-hover:bg-brand/5 transition-all">
+                <MailIcon size={20} className="group-hover:scale-110 transition-transform" />
+              </div>
+              <span className="border-b border-border group-hover:border-brand transition-colors">
+                {footerCopy.email.address}
+              </span>
             </motion.a>
 
-            {/* Social */}
-            <div className="flex gap-5 pt-2">
+            {/* Social Links - Minimalist Circle */}
+            <div className="flex gap-4 pt-4">
               {footerCopy.socialLinks.map((social, index) => {
                 const Icon = social.icon
                 return (
                   <motion.a
                     key={index}
                     href={social.href}
-                    aria-label={social.label}
-                    className="w-11 h-11 border border-white/15 rounded-md flex items-center justify-center"
-                    whileHover={{
-                      scale: 1.08,
-                      borderColor: social.color,
-                    }}
-                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground-muted hover:text-brand hover:border-brand transition-all"
+                    whileHover={{ y: -4 }}
                   >
-                    <Icon
-                      size={18}
-                      weight="duotone"
-                      style={{ color: social.color }}
-                    />
+                    <Icon size={18} />
                   </motion.a>
                 )
               })}
             </div>
           </div>
 
-          {/* Right */}
-          <div className="grid grid-cols-2 gap-12 pt-4">
-            {/* Links */}
-            <div className="space-y-6">
-              <h3 className="text-xs tracking-[0.2em] uppercase text-white/40">
-                Navigation
-              </h3>
-              {footerCopy.quickLinks.map(link => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  className="block text-sm text-white/65 hover:text-white"
-                  whileHover={{ x: 4 }}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+          {/* Right Side: Links & Status */}
+          <div className="lg:col-span-5 grid grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h3 className="text-[10px] tracking-[0.3em] uppercase text-foreground-muted font-bold">Navigation</h3>
+              <ul className="space-y-4">
+                {footerCopy.quickLinks.map(link => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="text-sm text-foreground-secondary hover:text-brand transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Status */}
-            <div className="space-y-6">
-              <h3 className="text-xs tracking-[0.2em] uppercase text-white/40">
-                Current Status
-              </h3>
-
-              <div className="flex items-center gap-2">
-                <motion.div
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: 'var(--color-acid-green)' }}
-                  animate={{ opacity: [1, 0.4, 1] }}
-                  transition={{ duration: 1.8, repeat: Infinity }}
-                />
-                <span className="text-sm text-white/65">
-                  {footerCopy.status.availability}
-                </span>
-              </div>
-
-              {footerCopy.status.notes.map((line, i) => (
-                <p key={i} className="text-sm text-white/55">
-                  {line}
+            <div className="space-y-8">
+              <h3 className="text-[10px] tracking-[0.3em] uppercase text-foreground-muted font-bold">Status</h3>
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse shadow-[0_0_8px_var(--brand)]" />
+                  <span className="text-sm text-foreground-secondary">{footerCopy.status.availability}</span>
+                </div>
+                <p className="text-xs leading-relaxed text-foreground-muted uppercase tracking-wider">
+                  {footerCopy.status.notes[0]}
                 </p>
-              ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
-          <p className="text-xs text-white/40">
-            © {currentYear} {footerCopy.owner}. All rights reserved.
-          </p>
+        {/* Big Background Text - THE SIGNATURE */}
+        <div className="mt-32 relative overflow-hidden select-none pointer-events-none">
+          <motion.h1 
+            initial={{ y: "50%", opacity: 0 }}
+            whileInView={{ y: "0%", opacity: 0.03 }}
+            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[19vw] font-bold leading-none tracking-[-0.08em] text-foreground text-center"
+          >
+            IVANDRY
+          </motion.h1>
+        </div>
 
-          <div className="flex gap-8 text-xs text-white/40">
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[9px] tracking-[0.2em] uppercase text-foreground-muted">
+            © {currentYear} Crafted with passion by Galang Ivandry.
+          </p>
+          
+          <div className="flex gap-8">
             {footerCopy.legalLinks.map(link => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                whileHover={{ color: 'var(--color-electric-blue)' }}
-              >
+              <Link key={link.label} href={link.href} className="text-[9px] tracking-[0.2em] uppercase text-foreground-muted hover:text-brand transition-colors">
                 {link.label}
-              </motion.a>
+              </Link>
             ))}
           </div>
         </div>
