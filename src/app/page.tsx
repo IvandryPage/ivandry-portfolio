@@ -1,18 +1,33 @@
-import { Hero } from "@/sections/Hero";
-import { content } from "@/lib/content/portfolio-content";
-import { Thesis } from "@/sections/Thesis";
-import { Projects } from "@/sections/Projects";
-import { Skills } from "@/sections/Skills";
-import { Social } from "@/sections/Social";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteNavigation } from "@/components/SiteNavigation";
+import { AboutSection } from "@/sections/AboutSection";
+import { HeroSection } from "@/sections/HeroSection";
+import { ProjectsSection } from "@/sections/ProjectsSection";
 
 export default function Home() {
   return (
     <>
-      <Hero {...content.hero} />
-      <Thesis {...content.thesis} />
-      <Projects {...content.selectedWork} />
-      <Skills {...content.skills} />
-      <Social {...content.social} />
+      <AnimatedBackground />
+      <ScrollProgress />
+      <SiteNavigation />
+      
+      <main>
+        <HeroSection />
+        
+        <div id="works">
+          <ProjectsSection />
+        </div>
+        
+        <div id="about">
+          <AboutSection />
+        </div>
+        
+        <div id="contact">
+          <SiteFooter />
+        </div>
+      </main>
     </>
   );
 }

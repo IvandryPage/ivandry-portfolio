@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${spaceGrostek.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${spaceGrostek.variable} antialiased min-h-screen bg-background text-foreground`}
       >
           {children}
       </body>
