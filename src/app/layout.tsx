@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {   JetBrains_Mono, Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
+import {   JetBrains_Mono, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -14,11 +14,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: 'swap'
 })
 
-const spaceGrostek = Space_Grotesk({
-  variable: "--font-space-grostek",
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
   subsets: ["latin"],
   display: 'swap'
-});
+})
 
 export const metadata: Metadata = {
   title: "Ivandry Portfolio",
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${spaceGrostek.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} ${playfair.variable} antialiased min-h-screen bg-background text-foreground`}
       >
           {children}
       </body>

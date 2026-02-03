@@ -1,17 +1,18 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 
-@custom-variant dark (&:is(.dark *));
-@source "../**/*.{js,ts,jsx,tsx}";
-
+/* Root Design Tokens */
 :root {
+  /* Typography */
   --font-size: 16px;
 
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
 
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  /* Core Colors */
   --background: #0b0f14;
   --background-surface: #111827;
   --background-elevated: #1f2937;
@@ -22,34 +23,35 @@
 
   --primary: #030213;
   --secondary: #312e81;
-  --accent: #22d3ee;
 
+  --accent: #22d3ee;
   --accent-hover: #67e8f9;
   --accent-soft: rgba(34, 211, 238, 0.14);
 
-  --muted: #ececf0;
   --border: rgba(255, 255, 255, 0.1);
   --ring: oklch(0.708 0 0);
 
+  /* Semantic Feedback */
   --destructive: #d4183d;
   --success: #3fb950;
   --warning: #d29922;
 
+  /* Radius */
   --radius: 0.625rem;
 
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-
+  /* Signature Neon Palette (used explicitly, not everywhere) */
   --color-electric-blue: #00d4ff;
   --color-neon-pink: #ff0080;
   --color-cyber-purple: #b400ff;
   --color-acid-green: #00ff88;
 
+  /* Layout Rhythm */
   --editorial-spacing: clamp(2rem, 5vw, 6rem);
 
   scroll-behavior: smooth;
 }
 
+/* Dark Mode Refinement */
 .dark {
   --background: #0a0a0f;
   --foreground: #ffffff;
@@ -57,6 +59,7 @@
   --ring: oklch(0.439 0 0);
 }
 
+/* Tailwind Theme Bridge */
 @theme inline {
   --color-background: var(--background);
   --color-background-surface: var(--background-surface);
@@ -68,6 +71,7 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-soft: var(--accent-soft);
@@ -88,6 +92,7 @@
   --font-mono: var(--font-mono);
 }
 
+/* Base Layer */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -105,6 +110,7 @@
     font-family: var(--font-sans);
   }
 
+  /* Headings — restrained, engineering-forward */
   h1,
   h2,
   h3,
@@ -138,6 +144,7 @@
     line-height: 1.7;
   }
 
+  /* Editorial emphasis */
   em,
   i,
   .italic {
@@ -145,6 +152,7 @@
     font-style: italic;
   }
 
+  /* Code blocks */
   code,
   pre {
     font-family: var(--font-mono);
@@ -155,6 +163,7 @@
   }
 }
 
+/* Components */
 @layer components {
   .text-muted {
     font-size: 0.875rem;
@@ -171,11 +180,13 @@
   }
 }
 
+/* UX Polish */
 ::selection {
   background: var(--accent-soft);
   color: var(--accent);
 }
 
+/* Scrollbar — subtle, branded */
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -193,22 +204,27 @@ body::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Neon Utilities (use intentionally, not globally) */
 .glow-blue {
-  text-shadow: 0 0 20px var(--color-electric-blue),
+  text-shadow:
+    0 0 20px var(--color-electric-blue),
     0 0 40px var(--color-electric-blue);
 }
 
 .glow-pink {
-  text-shadow: 0 0 20px var(--color-neon-pink),
+  text-shadow:
+    0 0 20px var(--color-neon-pink),
     0 0 40px var(--color-neon-pink);
 }
 
 .glow-purple {
-  text-shadow: 0 0 20px var(--color-cyber-purple),
+  text-shadow:
+    0 0 20px var(--color-cyber-purple),
     0 0 40px var(--color-cyber-purple);
 }
 
 .glow-green {
-  text-shadow: 0 0 20px var(--color-acid-green),
+  text-shadow:
+    0 0 20px var(--color-acid-green),
     0 0 40px var(--color-acid-green);
 }

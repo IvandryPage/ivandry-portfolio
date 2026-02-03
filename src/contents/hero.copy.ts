@@ -1,29 +1,29 @@
 export const heroCopy = {
-  overline: "LEVEL SELECT / 2026",
+  overline: "SYSTEM BUILD MODE / 2026",
 
   title: {
-    line1: "Pixel",
-    line2: "Alchemist",
-    line3: "& Worldbuilder",
+    line1: "Frontend & Game",
+    line2: "Developer",
+    line3: "(System-minded)",
   },
 
   description:
-    "I don't just build websites—I architect digital experiences that pulse with life. From game worlds that trap you for hours to web interfaces that feel like magic tricks.",
+    "System-oriented developer with strong Git discipline. I build interactive web interfaces and game systems by prioritizing clarity, maintainability, and workflow correctness over visual noise.",
 
   stats: [
     {
-      label: "Weapon",
+      label: "Primary Stack",
       value: "React / Next.js",
       colorVar: "--color-electric-blue",
     },
     {
-      label: "Power",
-      value: "Unity / Unreal",
+      label: "Game Tech",
+      value: "C++ / SFML",
       colorVar: "--color-neon-pink",
     },
     {
-      label: "Magic",
-      value: "GLSL / WebGL",
+      label: "Workflow",
+      value: "Git-First Development",
       colorVar: "--color-acid-green",
     },
   ],

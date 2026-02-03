@@ -1,111 +1,97 @@
 'use client'
+
 import { motion } from "framer-motion";
 import { heroCopy } from "@/contents/hero.copy";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 relative overflow-hidden">
+    <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-24 relative overflow-hidden">
       <div className="max-w-7xl w-full">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="space-y-8"
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="space-y-12"
         >
           {/* Overline */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 1 }}
-            className="text-xs tracking-[0.3em] uppercase"
-            style={{
-              background:
-                "linear-gradient(90deg, var(--color-electric-blue), var(--color-neon-pink))",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
+            transition={{ delay: 0.15, duration: 0.5 }}
+            className="text-accent"
           >
             {heroCopy.overline}
           </motion.p>
 
           {/* Title */}
-          <div className="space-y-4">
-            <motion.h1
-              className="text-[clamp(3rem,10vw,12rem)] leading-[0.9] tracking-[-0.03em] font-medium"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
+          <motion.h1
+            className="
+              font-medium tracking-[-0.035em]
+              leading-[0.9]
+              text-[clamp(2.75rem,8.5vw,9.5rem)]
+            "
+          >
+            {/* Primary highlight */}
+            <span
+              className="block"
+              style={{
+                background:
+                  "linear-gradient(135deg, var(--color-electric-blue), var(--color-cyber-purple))",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                opacity: 0.92,
+              }}
             >
-              <motion.span
-                className="inline-block"
-                style={{
-                  background:
-                    "linear-gradient(135deg, var(--color-electric-blue), var(--color-cyber-purple))",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              >
-                {heroCopy.title.line1}
-              </motion.span>
-              <br />
-              <span className="text-white/90">{heroCopy.title.line2}</span>
-              <br />
-              <motion.span
-                className="inline-block italic font-light"
-                style={{
-                  background:
-                    "linear-gradient(90deg, var(--color-neon-pink), var(--color-acid-green))",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              >
-                {heroCopy.title.line3}
-              </motion.span>
-            </motion.h1>
-          </div>
+              {heroCopy.title.line1}
+            </span>
+
+            {/* Structural anchor */}
+            <span className="block text-white/90 text-[0.85em]">
+              {heroCopy.title.line2}
+            </span>
+
+            {/* Editorial accent */}
+            <span
+              className="
+                block italic font-light
+                text-[0.75em] leading-[1.1]
+              "
+              style={{
+                background:
+                  "linear-gradient(90deg, var(--color-neon-pink), var(--color-acid-green))",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                opacity: 0.6,
+              }}
+            >
+              {heroCopy.title.line3}
+            </span>
+          </motion.h1>
 
           {/* Description + Stats */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-            className="max-w-2xl space-y-6 pt-8"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="max-w-xl space-y-8 pt-4"
           >
-            <p className="text-lg leading-relaxed text-white/80">
+            <p className="text-base md:text-lg leading-relaxed text-foreground-secondary">
               {heroCopy.description}
             </p>
 
-            <div className="flex gap-8 text-sm">
+            <div className="flex flex-wrap gap-12">
               {heroCopy.stats.map((item) => (
                 <motion.div
                   key={item.label}
-                  whileHover={{ y: -4 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  whileHover={{ y: -2 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 22 }}
+                  className="space-y-1"
                 >
-                  <span className="block tracking-wide text-white/50">
+                  <span className="block text-xs uppercase tracking-wider text-foreground-muted">
                     {item.label}
                   </span>
                   <span
-                    className="block mt-1 font-medium"
+                    className="block text-sm font-medium"
                     style={{ color: `var(${item.colorVar})` }}
                   >
                     {item.value}
@@ -121,17 +107,13 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="w-px h-16 bg-linear-to-b from-transparent via-white/40 to-transparent"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-px h-12 bg-gradient-to-b from-transparent via-border to-transparent"
         />
       </motion.div>
     </section>

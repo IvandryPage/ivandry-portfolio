@@ -1,4 +1,3 @@
-import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavigation } from "@/components/SiteNavigation";
@@ -9,7 +8,6 @@ import { ProjectsSection } from "@/sections/ProjectsSection";
 export default function Home() {
   return (
     <>
-      <AnimatedBackground />
       <ScrollProgress />
       <SiteNavigation />
       
