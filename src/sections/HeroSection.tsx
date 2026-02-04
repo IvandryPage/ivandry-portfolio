@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, Variants } from "framer-motion";
+import { easeInOut, motion, Variants } from "framer-motion";
 import { heroCopy } from "@/contents/hero.copy";
 
 export function HeroSection() {
@@ -29,7 +29,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full flex flex-col justify-center md:justify-end overflow-hidden bg-background px-6 md:px-12 lg:px-24 md:pb-32">
-      {/* Background Glow - Dimmed for better focus */}
+      {/* Background Glow */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-[-10%] left-[-5%] w-[60%] md:w-[35%] h-[35%] rounded-full bg-brand/5 blur-[120px]" />
       </div>
@@ -44,14 +44,14 @@ export function HeroSection() {
           {/* Overline */}
           <div className="overflow-hidden">
             <motion.div variants={revealVariants} className="flex items-center gap-3">
-              <div className="h-[1px] w-6 bg-brand/40 hidden md:block" />
+              <div className="h-px w-6 bg-brand/40 hidden md:block" />
               <p className="text-brand text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-bold">
                 {heroCopy.overline}
               </p>
             </motion.div>
           </div>
 
-          {/* Title - Optimized Desktop Size (Reduced from 9.5rem to 7.5rem) */}
+          {/* Title */}
           <h1
             suppressHydrationWarning
             className="font-medium tracking-[-0.05em] leading-[0.9] text-[clamp(2.8rem,9vw,7.5rem)]"
@@ -59,7 +59,7 @@ export function HeroSection() {
             <div className="overflow-hidden py-1">
               <motion.span
                 variants={revealVariants}
-                className="block bg-gradient-to-r from-brand to-warm-amber bg-clip-text text-transparent"
+                className="block bg-linear-to-r from-brand to-warm-amber bg-clip-text text-transparent"
               >
                 {heroCopy.title.line1}
               </motion.span>
@@ -81,7 +81,7 @@ export function HeroSection() {
             </div>
           </h1>
 
-          {/* Description + Stats */}
+          {/* Description */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 15 },
@@ -96,14 +96,14 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Discover Label - Moved to side or kept minimal */}
+      {/* Scroll Call-to-Action */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
+        initial={{ height: 0 }}
+        animate={{ height: 100 }}
+        transition={{ delay: 2, duration: 2, repeat: 5, ease: easeInOut, repeatType:'reverse' }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3"
       >
-        <div className="w-[1px] h-8 bg-gradient-to-b from-brand/50 to-transparent" />
+        <div className="w-px h-16 bg-linear-to-b from-brand/50 to-transparent" />
       </motion.div>
     </section>
   );

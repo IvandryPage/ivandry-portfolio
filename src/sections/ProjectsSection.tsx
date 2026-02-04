@@ -9,7 +9,7 @@ import Link from "next/link";
 function ProjectItem({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   
-  // isInView hanya untuk trigger awal (opsional)
+  // Initial Trigger for Project Section
   const isInView = useInView(ref, { once: false, margin: "-10%" });
 
   const { scrollYProgress } = useScroll({
@@ -23,19 +23,17 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
     restDelta: 0.001
   });
 
-  // --- 1. KONTROL CONTENT (Dibuat lebih stabil) ---
-  // Kita buat teks muncul lebih cepat dan menghilang lebih lambat
+  // Animasi visual untuk setiap project
   const contentOpacity = useTransform(smoothProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
   const contentY = useTransform(smoothProgress, [0, 0.15, 0.85, 1], [40, 0, 0, -40]);
 
-  // --- 2. KONTROL VISUAL (Tetap Cinematic & Lazy) ---
   const imgScale = useTransform(smoothProgress, [0, 0.5, 1], [1.1, 1, 1.1]);
   const saturation = useTransform(smoothProgress, [0.2, 0.4, 0.6, 0.8], [0, 1, 1, 0]);
   const imgOpacity = useTransform(smoothProgress, [0, 0.25, 0.75, 1], [0.2, 0.6, 0.6, 0.2]);
 
   return (
     <section ref={ref} className="relative h-[120vh] flex items-center overflow-hidden">
-      {/* Visual Layer - Fullscreen Background (Lazy Visuals) */}
+      {/* Visual - Fullscreen Background (Project Image) */}
       <div className="absolute inset-0 w-full h-full z-0">
         <motion.div 
           style={{ 
@@ -50,32 +48,33 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             alt={project.title} 
             fill 
             className="object-cover"
-            priority={index < 2} // Hanya priority untuk 2 project pertama
+            priority={index < 2}
             loading={index < 2 ? "eager" : "lazy"} // Native lazy load untuk performa
           />
           <div className="absolute inset-0 bg-background/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background" />
         </motion.div>
       </div>
 
-      {/* Content Layer - Readable & Persistent (Good for UX/HR) */}
+      {/* Content */}
       <motion.div 
-        style={{ opacity: contentOpacity, y: contentY }} // Kontrol mandiri
+        style={{ opacity: contentOpacity, y: contentY }}
         className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24"
       >
         <div className="max-w-4xl space-y-8">
-          {/* Phase Marker */}
+          {/* Project Number */}
           <div className="flex items-center gap-4">
             <span className="text-[10px] tracking-[0.5em] font-bold text-brand">
-              PROJ {String(index + 1).padStart(2, "0")}
+              PROJECT {String(index + 1).padStart(2, "0")}
             </span>
             <motion.div 
                initial={{ width: 0 }}
                animate={isInView ? { width: 48 } : { width: 0 }}
-               className="h-[1px] bg-brand/50" 
+               className="h-px bg-brand/50" 
             />
           </div>
 
+          {/* Project Title */}
           <div className="space-y-4">
             <h2 className="text-[clamp(2.5rem,8vw,6.5rem)] leading-[0.9] tracking-[-0.05em] font-medium text-foreground">
               {project.title}
@@ -85,7 +84,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             </p>
           </div>
 
-          {/* Details - High Readability */}
+          {/* Project Details */}
           <div className="grid md:grid-cols-2 gap-12 pt-10 border-t border-white/10">
             <div className="space-y-4">
                <h4 className="text-[9px] tracking-[0.2em] uppercase text-foreground-muted font-bold">Concept</h4>
@@ -94,6 +93,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
                </p>
             </div>
             
+            {/* Call-to-Action */}
             <div className="flex flex-col justify-between gap-8">
               <div className="flex flex-wrap gap-4">
                 <Link href={"#"} className="group relative px-6 py-2.5 rounded-full border border-brand/40 overflow-hidden flex items-center gap-3">
@@ -120,6 +120,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
 export function ProjectsSection() {
   return (
     <section className="relative bg-background">
+      {/* SECTION LABEL */}
       <div className="sticky top-0 z-50 mix-blend-difference pointer-events-none">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-8 md:px-12 lg:px-24">
           <h2 className="text-[10px] tracking-[0.5em] font-medium text-foreground">WORKS</h2>
@@ -129,6 +130,7 @@ export function ProjectsSection() {
         </div>
       </div>
 
+      {/* SECTION CONTENT */}
       <div className="relative">
         {projectsCopy.map((project, index) => (
           <ProjectItem key={project.id} project={project} index={index} />

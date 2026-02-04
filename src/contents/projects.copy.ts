@@ -60,3 +60,5 @@ export const projectsCopy: Project[] = [
     icon: SparkleIcon,
   },
 ];
+
+

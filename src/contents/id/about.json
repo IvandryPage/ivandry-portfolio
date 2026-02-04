@@ -1,0 +1,82 @@
+{
+  "header": {
+    "title": "Identitas",
+    "index": "Berkas — 02"
+  },
+  "hero": {
+    "overline": "Di Balik Logika",
+    "title": {
+      "prefix": "Terobsesi dengan",
+      "emphasis": "alasan",
+      "connector": "di balik sebuah",
+      "target": "cara"
+    }
+  },
+  "identityBrief": [
+    {
+      "key": "Subjek",
+      "value": "Galang Ivandry"
+    },
+    {
+      "key": "Latar Belakang",
+      "value": "Sistem Informasi"
+    }
+  ],
+  "philosophy": {
+    "competencies": {
+      "label": "Curiosity Stack",
+      "items": [
+        "Next.js",
+        "C++",
+        "Git"
+      ]
+    },
+    "principles": {
+      "label": "Dorongan",
+      "items": [
+        "Penemuan Berbasis Rasa Ingin Tahu",
+        "Disiplin Kerja Mendalam",
+        "Pembelajaran Sistematis",
+        "Pemikiran First-Principles"
+      ]
+    }
+  },
+  "experiences": [
+    {
+      "period": "2025 — Sekarang",
+      "position": "Frontend Developer",
+      "institution": "Code124",
+      "description": "Merancang arsitektur lapisan visual dan fungsional untuk platform Code124 dan situs resmi HIMASISFO. Fokus pada modularitas komponen dan interaksi pengguna yang mulus dalam ekosistem komunitas mahasiswa."
+    },
+    {
+      "period": "2025 — Sekarang",
+      "position": "Asisten Laboratorium",
+      "institution": "Lab Sistem Informasi @UPNVYK",
+      "description": "Memfasilitasi transfer pengetahuan teknis untuk mata kuliah Dasar Pemrograman. Modul mendatang mencakup Pemrograman Web serta Algoritma & Struktur Data (DSA), dengan fokus menjembatani celah antara teori dan logika praktis."
+    },
+    {
+      "period": "2025 — 2026",
+      "position": "Staf Akademik & Keprofesian",
+      "institution": "HIMASISFO",
+      "description": "Mengelola forum strategis untuk asisten laboratorium dan merancang konten edukasi teknik. Bertanggung jawab atas copywriting teknis dan menerjemahkan konsep akademik yang kompleks menjadi narasi visual yang mudah dicerna."
+    },
+    {
+      "period": "2024 — Sekarang",
+      "position": "Mahasiswa Sistem Informasi",
+      "institution": "UPN 'Veteran' Yogyakarta",
+      "description": "Mengeksplorasi titik temu antara logika bisnis dan infrastruktur teknologi. Berfokus pada analisis sistem, desain database, dan optimalisasi aliran data organisasi."
+    },
+    {
+      "period": "2024 — Sekarang",
+      "position": "Mitra Logistik Independen",
+      "institution": "ShopeeFood",
+      "description": "Mengelola logistik pengiriman real-time dan kemandirian finansial. Peran ini menuntut presisi manajemen waktu yang tinggi dan ketahanan operasional sembari mengejar penguasaan teknis."
+    },
+    {
+      "period": "2023 — 2024",
+      "position": "Staf Operasional Ritel",
+      "institution": "Indomaret Group",
+      "description": "Menangani operasional ritel garda depan dan manajemen inventaris. Membangun disiplin profesional dasar, komunikasi dengan pelanggan, dan etos kerja yang kuat dalam lingkungan yang serba cepat."
+    }
+  ]
+}

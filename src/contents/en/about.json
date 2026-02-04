@@ -1,0 +1,82 @@
+{
+  "header": {
+    "title": "Identity",
+    "index": "Dossier — 02"
+  },
+  "hero": {
+    "overline": "Behind the Logic",
+    "title": {
+      "prefix": "Obsessed with the",
+      "emphasis": "why",
+      "connector": "behind the",
+      "target": "how"
+    }
+  },
+  "identityBrief": [
+    {
+      "key": "Subject",
+      "value": "Galang Ivandry"
+    },
+    {
+      "key": "Background",
+      "value": "Information Systems"
+    }
+  ],
+  "philosophy": {
+    "competencies": {
+      "label": "Curiosity Stack",
+      "items": [
+        "Next.js",
+        "C++ ",
+        "Git"
+      ]
+    },
+    "principles": {
+      "label": "Drive",
+      "items": [
+        "Curiosity-led Discovery",
+        "Deep Work Discipline",
+        "Systematic Learning",
+        "First-Principles Thinking"
+      ]
+    }
+  },
+  "experiences": [
+    {
+      "period": "2025 — Present",
+      "position": "Frontend Developer",
+      "institution": "Code124",
+      "description": "Architecting the visual and functional layers for the Code124 platform and the official HIMASISFO website. Focus is placed on component modularity and seamless user interaction within the student community ecosystem."
+    },
+    {
+      "period": "2025 — Present",
+      "position": "Laboratory Assistant",
+      "institution": "Information Systems Lab @UPNVYK",
+      "description": "Facilitating technical knowledge transfer for Programming Fundamentals. Upcoming modules include Web Development and Data Structures & Algorithms (DSA), focusing on bridging the gap between theory and practical logic."
+    },
+    {
+      "period": "2025 — 2026",
+      "position": "Academic & Professional Staff",
+      "institution": "HIMASISFO",
+      "description": "Managing strategic forums for lab assistants and engineering educational content. Responsible for technical copywriting and translating complex academic concepts into digestible visual narratives."
+    },
+    {
+      "period": "2024 — Present",
+      "position": "Information Systems Student",
+      "institution": "UPN 'Veteran' Yogyakarta",
+      "description": "Exploring the intersection of business logic and technological infrastructure. Focused on system analysis, database design, and the optimization of organizational data flows."
+    },
+    {
+      "period": "2024 — Present",
+      "position": "Independent Logistics Partner",
+      "institution": "ShopeeFood",
+      "description": "Managing real-time delivery logistics and financial independence. This role demands high time-management precision and operational resilience while pursuing technical mastery."
+    },
+    {
+      "period": "2023 — 2024",
+      "position": "Retail Operations Staff",
+      "institution": "Indomaret Group",
+      "description": "Handled front-end retail operations and inventory management. Developed foundational professional discipline, customer-facing communication, and a strong work ethic in a fast-paced environment."
+    }
+  ]
+}
