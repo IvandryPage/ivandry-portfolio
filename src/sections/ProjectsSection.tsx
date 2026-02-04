@@ -106,7 +106,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
                 </Link>
               </div>
 
-              <div className="text-[10px] tracking-[0.2em] uppercase text-foreground-muted font-mono">
+              <div className="text-[10px] tracking-[0.2em] uppercase text-foreground-muted font-serif">
                 {project.stack}
               </div>
             </div>
@@ -124,7 +124,7 @@ export function ProjectsSection() {
         <div className="max-w-7xl mx-auto flex justify-between items-center p-8 md:px-12 lg:px-24">
           <h2 className="text-[10px] tracking-[0.5em] font-medium text-foreground">WORKS</h2>
           <div className="flex items-center gap-4">
-            <span className="text-[10px] text-foreground-muted font-mono tracking-tighter">ARCHIVE — 26</span>
+            <span className="text-[10px] text-foreground-muted font-serif tracking-tighter">ARCHIVE — 26</span>
           </div>
         </div>
       </div>
