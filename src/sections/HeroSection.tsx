@@ -1,7 +1,6 @@
 'use client'
 
 import { easeInOut, motion, Variants } from "framer-motion";
-import { heroCopy } from "@/contents/hero.copy";
 import { useTranslations } from "next-intl";
 
 export function HeroSection() {
@@ -56,32 +55,40 @@ export function HeroSection() {
 
           {/* Title */}
           <h1
-            suppressHydrationWarning
             className="font-medium tracking-[-0.05em] leading-[0.9] text-[clamp(2.8rem,9vw,7.5rem)]"
           >
-            <div className="overflow-hidden py-1">
-              <motion.span
-                variants={revealVariants}
-                className="block bg-linear-to-r from-brand to-warm-amber bg-clip-text text-transparent"
-              >
-                {t("title.line1")}
-              </motion.span>
-            </div>
-
-            <div className="overflow-hidden py-1">
-              <motion.span variants={revealVariants} className="block text-foreground">
-                {heroCopy.title.line2}
-              </motion.span>
-            </div>
-
-            <div className="overflow-hidden py-1">
-              <motion.span
-                variants={revealVariants}
-                className="block italic font-serif font-light opacity-50 text-[0.7em] md:text-[0.6em]"
-              >
-                {t("title.line3")}
-              </motion.span>
-            </div>
+            {t.rich('title', {
+              line: (chunks) => (
+                <div className="overflow-hidden py-1">
+                  <motion.span variants={revealVariants} className="block">
+                    {chunks}
+                  </motion.span>
+                </div>
+              ),
+              br: () => <br />,
+              gradient: (chunks) => (
+                <div className="overflow-hidden py-1">
+                  <motion.span variants={revealVariants} className="block bg-linear-to-r from-brand to-warm-amber bg-clip-text text-transparent">
+                    {chunks}
+                  </motion.span>
+                </div>
+              ),
+              serif: (chunks) => (
+                <div className="overflow-hidden py-1">
+                  <motion.span variants={revealVariants} className="block italic font-serif font-light opacity-50 text-[0.7em] md:text-[0.6em]">
+                    {chunks}
+                  </motion.span>
+                </div>
+              ),
+              // Default text handler for lines without tags (like line 2 "Developer")
+              text: (chunks) => (
+                <div className="overflow-hidden py-1">
+                  <motion.span variants={revealVariants} className="block text-foreground">
+                    {chunks}
+                  </motion.span>
+                </div>
+              )
+            })}
           </h1>
 
           {/* Description */}

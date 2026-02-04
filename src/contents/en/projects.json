@@ -18,7 +18,7 @@
       "subtitle": "Knowledge vault with obscured access logic",
       "concept": "A radical approach to digital privacy. Chronicle Log eliminates visual navigation in favor of a 'Memory-Locked' gateway. Users access their archives by inputting exact category keys—making the data invisible to anyone who doesn't know the underlying taxonomy. It includes a user-defined secret protocol to reveal the index, ensuring that the system remains a private sanctuary where knowledge is protected by the user’s own memory.",
       "stack": [".NET MAUI", "C#", "SQLite", "Memory-Keyed Encryption"],
-      "imageUrl": "/assets/projects/chronicle-log.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/chronicle-log"
     },
@@ -28,7 +28,7 @@
       "subtitle": "A personal archive of C++ growth and game logic",
       "concept": "Pixelated is my private documentation of the long road toward C++ mastery. Rather than a finished product, it functions as a chronological journal of technical hurdles—from handling SFML render loops to deciphering ECS architecture. It is a systematic record of my learning curve, preserving every breakthrough and failed experiment as a foundation for future systems.",
       "stack": ["C++", "SFML", "Git Documentation"],
-      "imageUrl": "/assets/projects/pixelated.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/pixelated"
     },
@@ -38,7 +38,7 @@
       "subtitle": "A terminal-based behavioral simulation of academic struggle",
       "concept": "A raw, interactive exploration of imposter syndrome and academic pressure. Built as a terminal-based narrative engine, Recrafted uses complex decision branching to simulate the emotional weight of a student’s journey. Inspired by real-life events, it strips away visual distractions to focus on the 'logic of emotion,' forcing players to navigate the difficult choices that define one's self-worth.",
       "stack": ["C++", "Terminal-UI", "Branching Logic", "Narrative Design"],
-      "imageUrl": "/assets/projects/recrafted.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/recrafted"
     },
@@ -48,7 +48,7 @@
       "subtitle": "A low-level music management engine built on custom DSA",
       "concept": "A deep dive into fundamental computer science. RAiVfy is a terminal-based music controller that bypasses high-level libraries to implement raw Data Structures. From Doubly Linked Lists for playlist navigation to Stack-based 'Undo' operations and Queue-managed playback, this project demonstrates the 'rigorous logic' required to manage data flow efficiently in a memory-constrained environment.",
       "stack": ["C++", "Linked List", "Stack & Queue", "Sorting/Searching", "File"],
-      "imageUrl": "/assets/projects/raivfy.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
        "githubUrl": "https://github.com/IvandryPage/praktikum-algo-project"
     },
@@ -58,7 +58,7 @@
       "subtitle": "A database-driven prototype for gaming asset commerce",
       "concept": "A functional exploration of dynamic web systems. TeraHub is a prototype for a gaming item marketplace, focusing on the core relationship between relational databases and user interfaces. Built using PHP and MySQL, it demonstrates the fundamental logic of CRUD operations, inventory display, and the basic architecture of digital commerce without the abstraction of modern frameworks.",
       "stack": ["HTML", "CSS", "PHP", "MySQL"],
-      "imageUrl": "/assets/projects/terahub.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/praktikum-web-project"
     },

@@ -1,12 +1,6 @@
 {
   "overline": "System-focused developer / 2026",
-
-  "title": {
-    "line1": "Frontend & Game",
-    "line2": "Developer",
-    "line3": "—✦ neophyte" 
-  },
-
+  "title": "<line><gradient>Frontend & Game</gradient></line> <line>Developer</line> <line><serif>—✦ neophyte</serif></line>",
   "description":
     "I bridge the gap between creative frontend experiences and high-performance game logic. Focused on Git-disciplined workflows and entity-component architectures, I build software that scales by prioritizing structural integrity over ephemeral trends."
 }

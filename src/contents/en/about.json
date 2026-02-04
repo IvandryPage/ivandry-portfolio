@@ -5,20 +5,15 @@
   },
   "hero": {
     "overline": "Behind the Logic",
-    "title": {
-      "prefix": "Obsessed with the",
-      "emphasis": "why",
-      "connector": "behind the",
-      "target": "how"
-    }
+    "title": "Obsessed with the <br></br> <serif>why</serif> behind the <brand>how.</brand>"
   },
   "identityBrief": [
     {
-      "key": "Subject",
+      "label": "Subject",
       "value": "Galang Ivandry"
     },
     {
-      "key": "Background",
+      "label": "Background",
       "value": "Information Systems"
     }
   ],

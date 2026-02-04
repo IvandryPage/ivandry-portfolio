@@ -1,10 +1,12 @@
 'use client'
 
+import { Experience } from '@/types/experience.types'
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
-import { aboutCopy } from '@/contents/about.copy'
 
 export function AboutSection() {
+  const t = useTranslations('about')
   const containerRef = useRef<HTMLDivElement>(null)
   
   const { scrollYProgress } = useScroll({
@@ -17,13 +19,13 @@ export function AboutSection() {
   return (
     <section ref={containerRef} className="relative bg-background border-t border-border/40 py-40 overflow-visible">
       
-      {/* 1. STICKY LABEL */}
+      {/* HEADER */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="sticky top-0 z-40 mix-blend-difference">
           <div className="max-w-7xl mx-auto flex justify-between items-center p-8 md:px-12 lg:px-24">
-            <h2 className="text-[10px] tracking-[0.5em] font-medium text-foreground uppercase">Identity</h2>
+            <h2 className="text-[10px] tracking-[0.5em] font-medium text-foreground uppercase">{t("header.title")}</h2>
             <div className="hidden md:block text-[10px] text-foreground-muted font-mono tracking-tighter uppercase opacity-50">
-              Dossier — 02
+              {t("header.meta")}
             </div>
           </div>
         </div>
@@ -41,63 +43,73 @@ export function AboutSection() {
               className="space-y-10"
             >
               <div className="space-y-4">
-                <span className="text-[10px] tracking-[0.5em] uppercase text-brand font-bold">Behind the Logic</span>
+                <span className="text-[10px] tracking-[0.5em] uppercase text-brand font-bold">{t('hero.overline')}</span>
                 <h3 className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.85] tracking-[-0.05em] font-medium text-foreground">
-                  Obsessed with the <br />
-                  <span className="italic font-serif font-light text-foreground-secondary/40 text-[0.9em]">why</span> behind the <span className="text-brand">how.</span>
+                  {t.rich('hero.title', {
+                    br: () => <br />,
+                    serif: (chunks) => (
+                      <span className="italic font-serif font-light text-foreground-secondary/40 text-[0.9em]">
+                        {chunks}
+                      </span>
+                    ),
+                    brand: (chunks) => (
+                      <span className="text-brand">
+                        {chunks}
+                      </span>
+                    )
+                  })}
                 </h3>
               </div>
 
               {/* Personal Data Strip */}
               <div className="py-6 border-y border-border/20 flex flex-wrap gap-x-12 gap-y-6">
-                <div className="space-y-1">
-                  <span className="text-[8px] font-light text-brand/60 uppercase tracking-widest">Subject</span>
-                  <p className="text-xs font-light text-foreground uppercase tracking-widest">
-                    {aboutCopy.name}
-                  </p>
-                </div>
-                <div className="space-y-1 border-l border-border/20 pl-12">
-                  <span className="text-[8px] font-light text-brand/60 uppercase tracking-widest">Background</span>
-                  <p className="text-xs font-light text-foreground uppercase tracking-widest">
-                    Information Systems <span className="text-[10px] text-foreground-muted font-normal italic">@UPNVYK</span>
-                  </p>
-                </div>
+                {t.raw("identityBrief").map((item: { label: string; value: string }, index: number) => (
+                  <div 
+                    key={index} 
+                    className={`space-y-1 ${index !== 0 ? 'md:border-l md:border-border/20 md:pl-12' : ''}`}
+                  >
+                    <span className="text-[8px] font-light text-brand/60 uppercase tracking-widest block">
+                      {item.label}
+                    </span>
+                    <p className="text-xs font-light text-foreground uppercase tracking-widest">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
-            {/* Principles & Stack - Jarak pt-10 dihilangkan, diganti margin top tipis */}
+            {/* Principles & Stack */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
-              {/* 1. CURIOSITY STACK */}
               <div className="space-y-4">
                 <h4 className="text-[9px] tracking-[0.3em] uppercase text-brand font-bold italic font-serif flex items-center gap-2">
-                  <span className="w-4 h-px bg-brand/30" /> Curiosity Stack
+                  <span className="w-4 h-px bg-brand/30" /> {t("philosophy.competencies.label")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {aboutCopy.skills.map(s => (
+                  {t.raw("philosophy.competencies.items").map((skill: string, index: number) => (
                     <div 
-                      key={s} 
+                      key={index} 
                       className="group relative px-3 py-1.5 border border-border/40 hover:border-brand/50 transition-colors duration-500 overflow-hidden rounded-[2px]"
                     >
                       <div className="absolute inset-0 bg-brand/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                       <span className="relative text-[10px] font-mono uppercase tracking-tighter text-foreground-secondary group-hover:text-brand transition-colors">
-                        {s}
+                        {skill}
                       </span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* 2. DRIVE / PRINCIPLES */}
               <div className="space-y-4">
                 <h4 className="text-[9px] tracking-[0.3em] uppercase text-brand font-bold italic font-serif flex items-center gap-2">
-                  <span className="w-4 h-px bg-brand/30" /> Drive
+                  <span className="w-4 h-px bg-brand/30" /> {t("philosophy.principles.label")}
                 </h4>
                 <div className="space-y-3">
-                  {aboutCopy.values.map(v => (
-                    <div key={v} className="group flex items-baseline gap-2">
-                      <span className="text-[10px] font-mono text-brand/40 group-hover:text-brand transition-colors italic">/ /</span>
+                  {t.raw("philosophy.principles.items").map((value: string, index: number) => (
+                    <div key={index} className="group flex items-baseline gap-2">
+                      <span className="text-[10px] font-mono text-brand/40 group-hover:text-brand transition-colors italic">{"//"}</span>
                       <p className="text-sm text-foreground-secondary font-light tracking-tight group-hover:translate-x-1 transition-transform duration-300">
-                        {v}
+                        {value}
                       </p>
                     </div>
                   ))}
@@ -115,7 +127,7 @@ export function AboutSection() {
             />
 
             <div className="space-y-20 pl-10">
-              {aboutCopy.timeline.map((item, index) => (
+              {t.raw('experiences').map((experience: Experience, index: number) => (
                 <motion.div 
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
@@ -132,16 +144,20 @@ export function AboutSection() {
                   </div>
 
                   <div className="space-y-3">
-                    <span className="text-[10px] font-mono text-brand/60 uppercase tracking-[0.2em]">{item.period}</span>
-                    <h4 className="text-xl font-medium text-foreground leading-none">
-                      {item.title.split(' ').map((word, i) => (
-                        <span key={i} className={i % 2 !== 0 ? "italic font-serif font-light opacity-80" : ""}>
-                          {word}{' '}
-                        </span>
-                      ))}
+                    <span className="text-[10px] font-mono text-brand/60 uppercase tracking-[0.2em]">{experience.period}</span>
+                      <h4 className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <span className="text-xl font-serif italic font-light text-foreground/90 tracking-tight">
+                        {experience.position}
+                      </span>
+                      <span className="text-foreground-muted/30 font-extralight select-none">
+                        /
+                      </span>
+                      <span className="text-foreground-secondary/90 uppercase text-[10px] md:text-xs font-medium tracking-[0.15em]">
+                        {experience.institution}
+                      </span>
                     </h4>
                     <p className="text-sm text-foreground-secondary/70 leading-relaxed font-light">
-                      {item.description}
+                      {experience.description}
                     </p>
                   </div>
                 </motion.div>

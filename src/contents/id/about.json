@@ -1,24 +1,19 @@
 {
   "header": {
     "title": "Identitas",
-    "index": "Berkas — 02"
+    "meta": "Berkas — 02"
   },
   "hero": {
     "overline": "Di Balik Logika",
-    "title": {
-      "prefix": "Terobsesi dengan",
-      "emphasis": "alasan",
-      "connector": "di balik sebuah",
-      "target": "cara"
-    }
+    "title": "Terobsesi dengan <br></br> <serif>alasan</serif> di balik sebuah <brand>cara.</brand>"
   },
   "identityBrief": [
     {
-      "key": "Subjek",
+      "label": "Subjek",
       "value": "Galang Ivandry"
     },
     {
-      "key": "Latar Belakang",
+      "label": "Latar Belakang",
       "value": "Sistem Informasi"
     }
   ],

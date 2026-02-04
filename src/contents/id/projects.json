@@ -18,7 +18,7 @@
       "subtitle": "Brankas pengetahuan dengan logika akses tersembunyi",
       "concept": "Sebuah pendekatan radikal terhadap privasi digital. Chronicle Log menghilangkan navigasi visual demi gerbang 'Memory-Locked'. Pengguna mengakses arsip mereka dengan memasukkan kunci kategori yang tepat—membuat data tidak terlihat bagi siapa pun yang tidak mengetahui taksonomi di baliknya. Proyek ini mencakup protokol rahasia yang ditentukan pengguna untuk menampilkan indeks, memastikan sistem tetap menjadi ruang pribadi di mana pengetahuan dilindungi oleh ingatan pengguna sendiri.",
       "stack": [".NET MAUI", "C#", "SQLite", "Memory-Keyed Encryption"],
-      "imageUrl": "/assets/projects/chronicle-log.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/chronicle-log"
     },
@@ -28,7 +28,7 @@
       "subtitle": "Arsip pribadi pertumbuhan C++ dan logika game",
       "concept": "Pixelated adalah dokumentasi pribadi saya dalam perjalanan panjang penguasaan C++. Alih-alih sebuah produk jadi, repositori ini berfungsi sebagai jurnal kronologis dari hambatan teknis—mulai dari menangani render loop SFML hingga membedah arsitektur ECS. Ini adalah catatan sistematis dari proses belajar saya, menyimpan setiap terobosan dan eksperimen yang gagal sebagai fondasi bagi sistem di masa depan.",
       "stack": ["C++", "SFML", "Dokumentasi Git"],
-      "imageUrl": "/assets/projects/pixelated.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/pixelated"
     },
@@ -38,7 +38,7 @@
       "subtitle": "Simulasi perilaku berbasis terminal tentang perjuangan akademik",
       "concept": "Eksplorasi interaktif yang jujur tentang imposter syndrome dan tekanan akademik. Dibangun sebagai engine naratif berbasis terminal, Recrafted menggunakan percabangan keputusan yang kompleks untuk mensimulasikan beban emosional dari perjalanan seorang mahasiswa. Terinspirasi dari kejadian nyata, proyek ini menghilangkan distraksi visual untuk fokus pada 'logika emosi', memaksa pemain menavigasi pilihan sulit yang menentukan harga diri seseorang.",
       "stack": ["C++", "Terminal-UI", "Logika Percabangan", "Desain Naratif"],
-      "imageUrl": "/assets/projects/recrafted.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/recrafted"
     },
@@ -48,7 +48,7 @@
       "subtitle": "Engine manajemen musik low-level berbasis struktur data kustom",
       "concept": "Eksplorasi mendalam terhadap fundamental ilmu komputer. RAiVfy adalah pengontrol musik berbasis terminal yang mengabaikan pustaka tingkat tinggi untuk mengimplementasikan Struktur Data murni. Mulai dari Doubly Linked List untuk navigasi playlist hingga operasi 'Undo' berbasis Stack dan pemutaran yang dikelola Queue, proyek ini menunjukkan 'logika ketat' yang diperlukan untuk mengelola alur data secara efisien dalam lingkungan memori terbatas.",
       "stack": ["C++", "Linked List", "Stack & Queue", "Sorting/Searching", "File"],
-      "imageUrl": "/assets/projects/raivfy.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/praktikum-algo-project"
     },
@@ -58,7 +58,7 @@
       "subtitle": "Prototipe berbasis database untuk perdagangan aset game",
       "concept": "Eksplorasi fungsional dari sistem web dinamis. TeraHub adalah prototipe marketplace item game yang berfokus pada hubungan inti antara database relasional dan antarmuka pengguna. Dibangun menggunakan PHP dan MySQL, proyek ini mendemonstrasikan logika fundamental operasi CRUD, tampilan inventaris, dan arsitektur dasar perdagangan digital tanpa abstraksi framework modern.",
       "stack": ["HTML", "CSS", "PHP", "MySQL"],
-      "imageUrl": "/assets/projects/terahub.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/praktikum-web-project"
     },
@@ -68,7 +68,7 @@
       "subtitle": "Portal informasi dan edukasi bencana secara real-time",
       "concept": "Menjembatani kesenjangan antara data seismik mentah dan kesadaran publik. Nadi Bumi adalah platform edukasi yang mengintegrasikan data real-time dari API BMKG untuk menyediakan peringatan bencana terkini. Dibangun dengan PHP, proyek ini fokus pada transformasi data geologi yang kompleks menjadi antarmuka yang mudah diakses, berfungsi sebagai pusat informasi krusial untuk kesiapsiagaan bencana alam.",
       "stack": ["PHP", "API BMKG", "Parsing Data JSON", "Integrasi Web"],
-      "imageUrl": "/assets/projects/nadi-bumi.jpg",
+      "imageUrl": "/assets/null.jpg",
       "liveUrl": "#",
       "githubUrl": "https://github.com/IvandryPage/nadi-bumi"
     }
