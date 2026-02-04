@@ -23,12 +23,13 @@ export function SiteFooter() {
   }
 
   return (
-    <footer className="relative bg-background pt-32 pb-12 px-6 md:px-12 lg:px-24 border-t border-border/40 overflow-hidden">
+    /* 1. Tambahkan overflow-x-clip untuk memastikan tidak ada kebocoran horizontal */
+    <footer className="relative bg-background pt-32 pb-12 px-6 md:px-12 lg:px-24 border-t border-border/40 overflow-x-clip">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-end">
           
           {/* LEFT: BIG CTA */}
-          <div className="lg:col-span-5 space-y-12">
+          <div className="lg:col-span-6 space-y-12"> {/* Ubah ke span-7 agar lebih lega */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-4">
               <span className="text-[10px] tracking-[0.4em] uppercase text-brand font-bold">
                 {t('cta.overline')}
@@ -42,15 +43,16 @@ export function SiteFooter() {
               </h2>
             </motion.div>
 
-            <motion.a href={FOOTER_DATA.email.href} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group flex flex-col w-fit">
+            {/* Email Link */}
+            <motion.a href={FOOTER_DATA.email.href} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group flex flex-col w-fit max-w-full">
               <span className="text-[9px] uppercase tracking-widest text-foreground-muted mb-3 italic font-serif">
                 {t('cta.inquiry')}
               </span>
-              <div className="flex items-center gap-5">
-                <span className="text-2xl md:text-4xl tracking-tighter font-medium text-foreground-secondary group-hover:text-brand transition-colors duration-500">
+              <div className="flex items-center gap-5 overflow-hidden"> {/* Safety overflow */}
+                <span className="text-xl md:text-4xl tracking-tighter font-medium text-foreground-secondary group-hover:text-brand transition-colors duration-500 truncate">
                   {FOOTER_DATA.email.address}
                 </span>
-                <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-brand group-hover:bg-brand/5 transition-all">
+                <div className="shrink-0 w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-brand group-hover:bg-brand/5 transition-all">
                   <MailIcon size={18} className="group-hover:scale-110 transition-transform" />
                 </div>
               </div>
@@ -59,7 +61,7 @@ export function SiteFooter() {
           </div>
 
           {/* RIGHT: SOCIALS */}
-          <div className="lg:col-span-6 space-y-12 lg:text-right">
+          <div className="lg:col-span-5 space-y-12 lg:text-right">
             <motion.button onClick={scrollToTop} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-foreground-muted hover:text-brand transition-colors">
               {t('backToTop')}
               <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center group-hover:-translate-y-1 group-hover:border-brand transition-all">
@@ -92,16 +94,21 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* WATERMARK */}
-        <div className="mt-24 pt-10 border-t border-border/10 overflow-hidden select-none pointer-events-none">
-          <motion.h1 initial={{ y: "60%", opacity: 0 }} whileInView={{ y: "0%", opacity: 0.05 }} transition={{ duration: 1.5 }} className="text-[18vw] font-bold leading-[0.7] tracking-[-0.08em] text-foreground text-center whitespace-nowrap uppercase">
+        {/* 2. WATERMARK: Penyebab Utama Overflow */}
+        <div className="mt-24 pt-10 border-t border-border/10 overflow-hidden select-none pointer-events-none w-full">
+          <motion.h1 
+            initial={{ y: "60%", opacity: 0 }} 
+            whileInView={{ y: "0%", opacity: 0.05 }} 
+            transition={{ duration: 1.5 }} 
+            className="text-[18vw] font-bold leading-[0.7] tracking-[-0.08em] text-foreground text-center whitespace-nowrap uppercase outline-none"
+          >
             {author('name')}
           </motion.h1>
         </div>
 
         {/* BOTTOM BAR */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[9px] tracking-widest uppercase text-foreground-muted">
+          <p className="text-[9px] tracking-widest uppercase text-foreground-muted text-center md:text-left">
             {t('copy', { year: currentYear })}
           </p>
         </div>
