@@ -98,7 +98,7 @@ export function SiteNavigation() {
             </div>
 
             <div className="absolute bottom-12 flex gap-12 text-[9px] tracking-[0.3em] uppercase text-foreground-muted font-mono">
-              <span>Jakarta / 2026</span>
+              <span>Yogyakarta / 2026</span>
               <span className="text-brand">{t('status')}</span>
             </div>
           </motion.div>

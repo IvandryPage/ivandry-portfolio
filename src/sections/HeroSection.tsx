@@ -2,6 +2,7 @@
 
 import { easeInOut, motion, Variants } from "framer-motion";
 import { heroCopy } from "@/contents/hero.copy";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
   const containerVariants: Variants = {
@@ -27,6 +28,8 @@ export function HeroSection() {
     },
   };
 
+  const t = useTranslations('hero')
+
   return (
     <section className="relative min-h-screen w-full flex flex-col justify-center md:justify-end overflow-hidden bg-background px-6 md:px-12 lg:px-24 md:pb-32">
       {/* Background Glow */}
@@ -46,7 +49,7 @@ export function HeroSection() {
             <motion.div variants={revealVariants} className="flex items-center gap-3">
               <div className="h-px w-6 bg-brand/40 hidden md:block" />
               <p className="text-brand text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-bold">
-                {heroCopy.overline}
+                {t('overline')}
               </p>
             </motion.div>
           </div>
@@ -61,7 +64,7 @@ export function HeroSection() {
                 variants={revealVariants}
                 className="block bg-linear-to-r from-brand to-warm-amber bg-clip-text text-transparent"
               >
-                {heroCopy.title.line1}
+                {t("title.line1")}
               </motion.span>
             </div>
 
@@ -76,7 +79,7 @@ export function HeroSection() {
                 variants={revealVariants}
                 className="block italic font-serif font-light opacity-50 text-[0.7em] md:text-[0.6em]"
               >
-                {heroCopy.title.line3}
+                {t("title.line3")}
               </motion.span>
             </div>
           </h1>
@@ -90,7 +93,7 @@ export function HeroSection() {
             className="max-w-2xl space-y-8 md:space-y-12"
           >
             <p className="text-sm md:text-lg leading-relaxed text-foreground-secondary/70 font-light max-w-lg">
-              {heroCopy.description}
+              {t("description")}
             </p>
           </motion.div>
         </motion.div>
