@@ -70,7 +70,7 @@ export function AboutSection() {
               {/* 1. CURIOSITY STACK */}
               <div className="space-y-4">
                 <h4 className="text-[9px] tracking-[0.3em] uppercase text-brand font-bold italic font-serif flex items-center gap-2">
-                  <span className="w-4 h-[1px] bg-brand/30" /> Curiosity Stack
+                  <span className="w-4 h-px bg-brand/30" /> Curiosity Stack
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {aboutCopy.skills.map(s => (
@@ -90,12 +90,12 @@ export function AboutSection() {
               {/* 2. DRIVE / PRINCIPLES */}
               <div className="space-y-4">
                 <h4 className="text-[9px] tracking-[0.3em] uppercase text-brand font-bold italic font-serif flex items-center gap-2">
-                  <span className="w-4 h-[1px] bg-brand/30" /> Drive
+                  <span className="w-4 h-px bg-brand/30" /> Drive
                 </h4>
                 <div className="space-y-3">
                   {aboutCopy.values.map(v => (
                     <div key={v} className="group flex items-baseline gap-2">
-                      <span className="text-[10px] font-mono text-brand/40 group-hover:text-brand transition-colors italic">//</span>
+                      <span className="text-[10px] font-mono text-brand/40 group-hover:text-brand transition-colors italic">/ /</span>
                       <p className="text-sm text-foreground-secondary font-light tracking-tight group-hover:translate-x-1 transition-transform duration-300">
                         {v}
                       </p>
@@ -123,7 +123,7 @@ export function AboutSection() {
                   viewport={{ once: true, margin: "-10%" }}
                   className="relative group"
                 >
-                  <div className="absolute -left-[45px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border border-border group-hover:border-brand transition-all duration-500 z-20">
+                  <div className="absolute -left-11.25 top-1.5 w-2.5 h-2.5 rounded-full bg-background border border-border group-hover:border-brand transition-all duration-500 z-20">
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}

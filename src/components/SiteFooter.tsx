@@ -125,13 +125,13 @@ export function SiteFooter() {
 
         {/* BOTTOM BAR */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[9px] tracking-[0.1em] uppercase text-foreground-muted">
+          <p className="text-[9px] tracking-widest uppercase text-foreground-muted">
             © {currentYear} — Crafted by Galang Ivandry.
           </p>
           
           <div className="flex gap-6">
             {footerCopy.legalLinks.map(link => (
-              <Link key={link.label} href={link.href} className="text-[9px] tracking-[0.1em] uppercase text-foreground-muted hover:text-brand transition-colors">
+              <Link key={link.label} href={link.href} className="text-[9px] tracking-widest uppercase text-foreground-muted hover:text-brand transition-colors">
                 {link.label}
               </Link>
             ))}
