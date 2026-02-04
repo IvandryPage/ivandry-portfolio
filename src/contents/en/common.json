@@ -5,5 +5,15 @@
     "contact": "Contact",
     "close": "Close",
     "status": "Available for work"
+  },
+  "footer": {
+    "cta": {
+      "overline": "Bridge the Gap",
+      "title": "Initiate a <br></br> <serif>meaningful</serif> <br></br> <brand>Connection.</brand>",
+      "inquiry": "Direct Inquiry"
+    },
+    "socialsTitle": "/ Find me on",
+    "backToTop": "Back to top",
+    "copy": "© {year} — Crafted by Galang Ivandry."
   }
 }
