@@ -6,6 +6,7 @@ import { NAV_LINKS } from '@/contents/navigation'
 
 export function SiteNavigation() {
   const t = useTranslations('common.nav')
+  const author = useTranslations('common.author')
   const { scrollY } = useScroll()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -37,8 +38,8 @@ export function SiteNavigation() {
             <div className="absolute inset-0 rounded-full opacity-[0.03] pointer-events-none bg-[url('/noise.svg')]" />
           )}
 
-          <motion.a href="#" className="text-[10px] tracking-[0.4em] font-bold text-foreground">
-            IVANDRY<span className="text-brand">.</span>
+          <motion.a href="#" className="text-[10px] tracking-[0.4em] font-bold text-foreground uppercase">
+            {author('name')}<span className="text-brand">.</span>
           </motion.a>
 
           {/* Desktop Links - i18n Applied */}

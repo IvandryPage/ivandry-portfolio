@@ -8,6 +8,7 @@ import { Social } from '@/types/social.types'
 
 export function SiteFooter() {
   const t = useTranslations('common.footer')
+  const author = useTranslations('common.author')
   const currentYear = new Date().getFullYear()
   const MailIcon = FOOTER_DATA.email.icon
 
@@ -94,7 +95,7 @@ export function SiteFooter() {
         {/* WATERMARK */}
         <div className="mt-24 pt-10 border-t border-border/10 overflow-hidden select-none pointer-events-none">
           <motion.h1 initial={{ y: "60%", opacity: 0 }} whileInView={{ y: "0%", opacity: 0.05 }} transition={{ duration: 1.5 }} className="text-[18vw] font-bold leading-[0.7] tracking-[-0.08em] text-foreground text-center whitespace-nowrap uppercase">
-            IVANDRY
+            {author('name')}
           </motion.h1>
         </div>
 
