@@ -20,7 +20,7 @@ export function SiteNavigation() {
 
   return (
     <>
-      <div className="fixed top-6 inset-x-0 z-60 flex justify-center px-6 pointer-events-none">
+      <div className="fixed top-10 md:top-6 inset-x-0 z-60 flex justify-center px-6 pointer-events-none">
         <motion.nav
           style={{ scale: navScale, y: navY }}
           className={`

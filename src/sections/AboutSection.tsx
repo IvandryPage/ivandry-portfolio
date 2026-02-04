@@ -31,11 +31,11 @@ export function AboutSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="max-w-5xl xl:max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* LEFT: THE MANIFESTO */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-5 space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export function AboutSection() {
             >
               <div className="space-y-4">
                 <span className="text-[10px] tracking-[0.5em] uppercase text-brand font-bold">{t('hero.overline')}</span>
-                <h3 className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.85] tracking-[-0.05em] font-medium text-foreground">
+                <h3 className="text-4xl lg:text-5xl xl:text-[4.5rem] leading-[0.85] tracking-[-0.05em] font-medium text-foreground">
                   {t.rich('hero.title', {
                     br: () => <br />,
                     serif: (chunks) => (
@@ -80,7 +80,7 @@ export function AboutSection() {
             </motion.div>
 
             {/* Principles & Stack */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
+            <div className="grid grid-cols-2 lg:gap-12 xl:gap-24">
               <div className="space-y-4">
                 <h4 className="text-[9px] tracking-[0.3em] uppercase text-brand font-bold italic font-serif flex items-center gap-2">
                   <span className="w-4 h-px bg-brand/30" /> {t("philosophy.competencies.label")}
@@ -119,7 +119,7 @@ export function AboutSection() {
           </div>
 
           {/* RIGHT: THE EXPERIENCE TIMELINE */}
-          <div className="lg:col-span-5 relative pt-4 md:pt-32">
+          <div className="lg:col-span-6 relative pt-4 md:pt-32">
             <div className="absolute left-0 top-0 w-px h-full bg-border/20" />
             <motion.div 
               style={{ scaleY: smoothProgress, transformOrigin: 'top' }}
@@ -135,7 +135,7 @@ export function AboutSection() {
                   viewport={{ once: true, margin: "-10%" }}
                   className="relative group"
                 >
-                  <div className="absolute -left-11.25 top-1.5 w-2.5 h-2.5 rounded-full bg-background border border-border group-hover:border-brand transition-all duration-500 z-20">
+                  <div className="absolute -left-[44.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border border-border group-hover:border-brand transition-all duration-500 z-20">
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}

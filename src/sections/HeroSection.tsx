@@ -36,7 +36,7 @@ export function HeroSection() {
         <div className="absolute top-[-10%] left-[-5%] w-[60%] md:w-[35%] h-[35%] rounded-full bg-brand/5 blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl w-full mx-auto pt-32 md:pt-0">
+      <div className="max-w-7xl w-full mx-auto pt-32 md:pt-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"

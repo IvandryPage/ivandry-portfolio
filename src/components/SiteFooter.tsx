@@ -27,7 +27,7 @@ export function SiteFooter() {
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-end">
           
           {/* LEFT: BIG CTA */}
-          <div className="lg:col-span-7 space-y-12">
+          <div className="lg:col-span-5 space-y-12">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-4">
               <span className="text-[10px] tracking-[0.4em] uppercase text-brand font-bold">
                 {t('cta.overline')}
@@ -58,7 +58,7 @@ export function SiteFooter() {
           </div>
 
           {/* RIGHT: SOCIALS */}
-          <div className="lg:col-span-5 space-y-12 lg:text-right">
+          <div className="lg:col-span-6 space-y-12 lg:text-right">
             <motion.button onClick={scrollToTop} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-foreground-muted hover:text-brand transition-colors">
               {t('backToTop')}
               <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center group-hover:-translate-y-1 group-hover:border-brand transition-all">
