@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IVANDRY // ARCHIVE 2026
 
-## Getting Started
+<div align="center">
+  <p>✦ <i>A data-driven portfolio capturing the intersection of logic and interface.</i> ✦</p>
+</div>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### // OVERVIEW
+This repository serves as my professional archive and digital portfolio. Engineered with a focus on structural clarity, it acts as a centralized hub for documenting my technical projects, from low-level systems to modern web applications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The core of this system is a **JSON-driven architecture**, where all project data is decoupled from the UI layer to allow for seamless updates, strict data integrity, and a scalable archival process.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### // TECH STACK
+Built with a commitment to type-safety and minimalist design:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Framework** | Next.js (App Router)
+* **Language** | TypeScript (Strict Mode)
+* **Data** | Centralized JSON Schema
+* **Styling** | Tailwind CSS
+* **Motion** | Framer Motion
+* **Host** | Vercel
 
-## Learn More
+### // SYSTEM LOGIC
+* **JSON Mapping** | Project entries are dynamically rendered through a structured JSON schema, ensuring that content management remains separate from the rendering logic.
+* **Modular Interface** | The UI is composed of isolated React components, allowing for a consistent aesthetic across different data types.
+* **Type-Safe Rendering** | TypeScript interfaces define the project structure, preventing data inconsistencies during the mapping process.
+* **Archival Precision** | Designed with a "Dossier" aesthetic, prioritizing informational density and technical accuracy over decorative elements.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### // PHILOSOPHY
+Every line of code and every visual component follows a specific intent: to bridge the gap between complex system logic and intuitive user experiences. The archive is a living record of the motto: *"Everything Vows Aspire • Desire Ablaze."*
