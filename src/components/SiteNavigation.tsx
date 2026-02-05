@@ -23,6 +23,13 @@ export function SiteNavigation() {
     <>
       <div className="fixed top-10 md:top-6 inset-x-0 z-60 flex justify-center px-6 pointer-events-none">
         <motion.nav
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ 
+            duration: 0.8, 
+            delay: 1,
+            ease: [0.22, 1, 0.36, 1] 
+          }}
           style={{ scale: navScale, y: navY }}
           className={`
             pointer-events-auto relative flex items-center justify-between

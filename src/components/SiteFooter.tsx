@@ -23,12 +23,11 @@ export function SiteFooter() {
   }
 
   return (
-    /* 1. Tambahkan overflow-x-clip untuk memastikan tidak ada kebocoran horizontal */
     <footer className="relative bg-background pt-32 pb-12 px-6 md:px-12 lg:px-24 border-t border-border/40 overflow-x-clip">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-end">
           
-          {/* LEFT: BIG CTA */}
+          {/* LEFT SIDE */}
           <div className="lg:col-span-6 space-y-12"> {/* Ubah ke span-7 agar lebih lega */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-4">
               <span className="text-[10px] tracking-[0.4em] uppercase text-brand font-bold">
@@ -60,7 +59,7 @@ export function SiteFooter() {
             </motion.a>
           </div>
 
-          {/* RIGHT: SOCIALS */}
+          {/* RIGHT SIDE */}
           <div className="lg:col-span-5 space-y-12 lg:text-right">
             <motion.button onClick={scrollToTop} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-foreground-muted hover:text-brand transition-colors">
               {t('backToTop')}
@@ -94,7 +93,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* 2. WATERMARK: Penyebab Utama Overflow */}
+        {/* WATERMARK */}
         <div className="mt-24 pt-10 border-t border-border/10 overflow-hidden select-none pointer-events-none w-full">
           <motion.h1 
             initial={{ y: "60%", opacity: 0 }} 
