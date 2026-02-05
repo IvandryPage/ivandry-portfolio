@@ -94,7 +94,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
                 )}
                 {project.liveUrl && (
                   <Link href={project.liveUrl} className="px-4 py-2.5 text-[10px] uppercase tracking-widest text-foreground-muted hover:text-white transition-colors">
-                    {t('actions.demo')}
+                    {t('actions.releases')}
                   </Link>
                 )}
               </div>

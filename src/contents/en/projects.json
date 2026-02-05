@@ -7,7 +7,7 @@
     "projectIndexPrefix": "Project",
     "conceptLabel": "Concept",
     "actions": {
-      "demo": "Releases",
+      "releases": "Releases",
       "source": "Repository"
     }
   },
