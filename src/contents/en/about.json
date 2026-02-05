@@ -4,36 +4,21 @@
     "meta": "Dossier — 02"
   },
   "hero": {
-    "overline": "Behind the Logic",
-    "title": "Obsessed with the <br></br> <serif>why</serif> behind the <brand>how.</brand>"
+    "overline": "Logical Foundations",
+    "title": "Obsessed with the <br></br> <serif>mechanics</serif> behind the <brand>interfaces.</brand>"
   },
   "identityBrief": [
-    {
-      "label": "Subject",
-      "value": "Galang Ivandry"
-    },
-    {
-      "label": "Background",
-      "value": "Information Systems"
-    }
+    { "label": "Subject", "value": "Galang Ivandry" },
+    { "label": "Education", "value": "Information Systems" }
   ],
   "philosophy": {
     "competencies": {
-      "label": "Curiosity Stack",
-      "items": [
-        "Next.js",
-        "C++ ",
-        "Git"
-      ]
+      "label": "Technical Stack",
+      "items": ["Git", "C++", "C#", "Next.js", "React", "TypeScript", "MySQL", "PHP", "Tailwind CSS", "Figma", "Blender", "Linux Shell"]
     },
     "principles": {
-      "label": "Drive",
-      "items": [
-        "Curiosity-led Discovery",
-        "Deep Work Discipline",
-        "Systematic Learning",
-        "First-Principles Thinking"
-      ]
+      "label": "Operational Drive",
+      "items": ["First-Principles Thinking", "Deep Work Discipline", "Systematic Learning", "Architectural Integrity"]
     }
   },
   "experiences": [
@@ -41,37 +26,31 @@
       "period": "2025 — Present",
       "position": "Frontend Developer",
       "institution": "Code124",
-      "description": "Architecting the visual and functional layers for the Code124 platform and the official HIMASISFO website. Focus is placed on component modularity and seamless user interaction within the student community ecosystem."
+      "description": "Architecting the visual and functional layers for the Code124 platform and official HIMASISFO web ecosystem. Prioritizing component modularity and low-latency user interactions."
     },
     {
       "period": "2025 — Present",
       "position": "Laboratory Assistant",
-      "institution": "Information Systems Lab @UPNVYK",
-      "description": "Facilitating technical knowledge transfer for Programming Fundamentals. Upcoming modules include Web Development and Data Structures & Algorithms (DSA), focusing on bridging the gap between theory and practical logic."
-    },
-    {
-      "period": "2025 — 2026",
-      "position": "Academic & Professional Staff",
-      "institution": "HIMASISFO",
-      "description": "Managing strategic forums for lab assistants and engineering educational content. Responsible for technical copywriting and translating complex academic concepts into digestible visual narratives."
-    },
-    {
-      "period": "2024 — Present",
-      "position": "Information Systems Student",
       "institution": "UPN 'Veteran' Yogyakarta",
-      "description": "Exploring the intersection of business logic and technological infrastructure. Focused on system analysis, database design, and the optimization of organizational data flows."
+      "description": "Mentoring in Programming Fundamentals, Algorithm & Data Structures, and Web Programming. Bridging the gap between abstract algorithmic theory and practical software implementation."
+    },
+    {
+      "period": "2025 — Present",
+      "position": "Academic & Professional Staff",
+      "institution": "HIMASISFO UPNVYK",
+      "description": "Coordinating strategic educational forums for laboratory assistants. Responsible for technical copywriting and designing educational briefs for Information Systems content, ensuring complex topics are accessible to a wider audience."
     },
     {
       "period": "2024 — Present",
       "position": "Independent Logistics Partner",
       "institution": "ShopeeFood",
-      "description": "Managing real-time delivery logistics and financial independence. This role demands high time-management precision and operational resilience while pursuing technical mastery."
+      "description": "Navigating real-time logistical challenges. This role serves as a testament to operational resilience and financial independence while maintaining a rigorous technical learning curve."
     },
     {
       "period": "2023 — 2024",
-      "position": "Retail Operations Staff",
+      "position": "Retail Operations",
       "institution": "Indomaret Group",
-      "description": "Handled front-end retail operations and inventory management. Developed foundational professional discipline, customer-facing communication, and a strong work ethic in a fast-paced environment."
+      "description": "Executed high-velocity retail operations and inventory auditing. Cultivated foundational professional discipline and crisis management in a high-pressure environment."
     }
   ]
 }

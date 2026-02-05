@@ -7,7 +7,6 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { constructMetadata } from "@/lib/generateMetadata";
 import { fontClasses } from "@/lib/fonts";
-import { ScrollProgress } from "@/components/ScrollProgress";
 import { SiteNavigation } from "@/components/SiteNavigation";
 
 // Pre-renders all supported locales at build time
@@ -44,7 +43,6 @@ export default async function RootLayout({
         className={`${fontClasses} antialiased min-h-screen bg-background text-foreground`}
       >
         <NextIntlClientProvider messages={messages}>
-          <ScrollProgress />
           <SiteNavigation />
           {children}
         </NextIntlClientProvider>

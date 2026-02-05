@@ -4,36 +4,21 @@
     "meta": "Berkas — 02"
   },
   "hero": {
-    "overline": "Di Balik Logika",
-    "title": "Terobsesi dengan <br></br> <serif>alasan</serif> di balik sebuah <brand>cara.</brand>"
+    "overline": "Landasan Logika",
+    "title": "Terobsesi pada <br></br> <serif>mekanisme</serif> di balik sebuah <brand>antarmuka.</brand>"
   },
   "identityBrief": [
-    {
-      "label": "Subjek",
-      "value": "Galang Ivandry"
-    },
-    {
-      "label": "Latar Belakang",
-      "value": "Sistem Informasi"
-    }
+    { "label": "Subjek", "value": "Galang Ivandry" },
+    { "label": "Latar Belakang", "value": "Sistem Informasi" }
   ],
   "philosophy": {
     "competencies": {
-      "label": "Curiosity Stack",
-      "items": [
-        "Next.js",
-        "C++",
-        "Git"
-      ]
+      "label": "Kapabilitas Teknis",
+      "items": ["Git", "C++", "C#", "Next.js", "React", "TypeScript", "MySQL", "PHP", "Tailwind CSS", "Figma", "Blender", "Linux Shell"]
     },
     "principles": {
-      "label": "Dorongan",
-      "items": [
-        "Penemuan Berbasis Rasa Ingin Tahu",
-        "Disiplin Kerja Mendalam",
-        "Pembelajaran Sistematis",
-        "Pemikiran First-Principles"
-      ]
+      "label": "Prinsip Kerja",
+      "items": ["Prinsip Fundamental", "Disiplin Kerja Mendalam", "Sistematis", "Integritas Arsitektur"]
     }
   },
   "experiences": [
@@ -41,37 +26,31 @@
       "period": "2025 — Sekarang",
       "position": "Frontend Developer",
       "institution": "Code124",
-      "description": "Merancang arsitektur lapisan visual dan fungsional untuk platform Code124 dan situs resmi HIMASISFO. Fokus pada modularitas komponen dan interaksi pengguna yang mulus dalam ekosistem komunitas mahasiswa."
+      "description": "Merancang lapisan visual dan fungsional untuk platform Code124 serta ekosistem web HIMASISFO. Fokus pada modularitas komponen dan interaksi pengguna yang responsif."
     },
     {
       "period": "2025 — Sekarang",
       "position": "Asisten Laboratorium",
-      "institution": "Lab Sistem Informasi @UPNVYK",
-      "description": "Memfasilitasi transfer pengetahuan teknis untuk mata kuliah Dasar Pemrograman. Modul mendatang mencakup Pemrograman Web serta Algoritma & Struktur Data (DSA), dengan fokus menjembatani celah antara teori dan logika praktis."
-    },
-    {
-      "period": "2025 — 2026",
-      "position": "Staf Akademik & Keprofesian",
-      "institution": "HIMASISFO",
-      "description": "Mengelola forum strategis untuk asisten laboratorium dan merancang konten edukasi teknik. Bertanggung jawab atas copywriting teknis dan menerjemahkan konsep akademik yang kompleks menjadi narasi visual yang mudah dicerna."
-    },
-    {
-      "period": "2024 — Sekarang",
-      "position": "Mahasiswa Sistem Informasi",
       "institution": "UPN 'Veteran' Yogyakarta",
-      "description": "Mengeksplorasi titik temu antara logika bisnis dan infrastruktur teknologi. Berfokus pada analisis sistem, desain database, dan optimalisasi aliran data organisasi."
+      "description": "Mentor untuk Dasar Pemrograman, Algoritma & Struktur Data, dan Pemrograman Web. Menjembatani teori algoritma abstrak dengan implementasi perangkat lunak praktis."
+    },
+    {
+      "period": "2025 — Sekarang",
+      "position": "Staff Akademik & Profesional",
+      "institution": "HIMASISFO UPNVYK",
+      "description": "Penanggung jawab forum edukasi strategis bagi asisten laboratorium. Bertanggung jawab atas technical copywriting dan penyusunan brief konten edukasi Sistem Informasi, guna menerjemahkan konsep teknis menjadi konten yang mudah dipahami."
     },
     {
       "period": "2024 — Sekarang",
-      "position": "Mitra Logistik Independen",
+      "position": "Independent Logistics Partner",
       "institution": "ShopeeFood",
-      "description": "Mengelola logistik pengiriman real-time dan kemandirian finansial. Peran ini menuntut presisi manajemen waktu yang tinggi dan ketahanan operasional sembari mengejar penguasaan teknis."
+      "description": "Navigasi logistik real-time dan manajemen operasional. Peran ini adalah bukti ketahanan kerja dan kemandirian finansial sembari tetap mengejar penguasaan teknis."
     },
     {
       "period": "2023 — 2024",
-      "position": "Staf Operasional Ritel",
+      "position": "Retail Operations",
       "institution": "Indomaret Group",
-      "description": "Menangani operasional ritel garda depan dan manajemen inventaris. Membangun disiplin profesional dasar, komunikasi dengan pelanggan, dan etos kerja yang kuat dalam lingkungan yang serba cepat."
+      "description": "Menangani operasional ritel berkecepatan tinggi dan audit inventaris. Mengasah disiplin profesional dasar dan manajemen krisis di lingkungan kerja yang dinamis."
     }
   ]
 }

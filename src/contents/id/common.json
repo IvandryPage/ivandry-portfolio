@@ -2,22 +2,22 @@
   "author": {
     "name": "Ivandry",
     "location": "Yogyakarta",
-    "status": "Available for work"
+    "status": "Terbuka untuk kolaborasi"
   },
   "nav": {
-    "works": "Karya",
-    "about": "Tentang",
-    "contact": "Kontak",
+    "works": "Arsip Karya",
+    "about": "Profil",
+    "contact": "Hubungi",
     "close": "Tutup",
-    "status": "Tersedia untuk proyek"
+    "status": "Status: Aktif"
   },
   "footer": {
     "cta": {
-      "overline": "Jembatani Kesenjangan",
-      "title": "Mulai sebuah <br></br> <serif>koneksi</serif> <br></br> yang <brand>bermakna.</brand>",
-      "inquiry": "Pertanyaan Langsung"
+      "overline": "Melampaui Sekadar Kode",
+      "title": "Mari jalin <br></br> <serif>diskusi</serif> <br></br> yang <brand>berdampak.</brand>",
+      "inquiry": "Pesan Langsung"
     },
-    "socialsTitle": "// Temukan saya di",
+    "socialsTitle": "// Tautan Digital",
     "backToTop": "Kembali ke atas",
     "copy": "© {year} — Dirancang oleh Galang Ivandry."
   }

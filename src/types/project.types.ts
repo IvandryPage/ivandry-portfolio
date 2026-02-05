@@ -4,7 +4,7 @@ export interface Project {
   subtitle: string
   concept: string
   stack: string
-  imageUrl: string
-  liveUrl: string
-  githubUrl: string
+  imageUrl?: string
+  liveUrl?: string
+  githubUrl?: string
 }

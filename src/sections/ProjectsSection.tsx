@@ -84,16 +84,19 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             
             <div className="flex flex-col justify-between gap-8">
               <div className="flex flex-wrap gap-4">
-                <Link href={project.githubUrl} className="group relative px-6 py-2.5 rounded-full border border-brand/40 overflow-hidden flex items-center gap-3">
-                   <div className="absolute inset-0 bg-brand translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                   <span className="relative z-10 text-[10px] uppercase tracking-widest font-bold group-hover:text-background transition-colors">
-                    {t('actions.source')}
-                   </span>
-                </Link>
-                
-                <Link href={project.liveUrl} className="px-4 py-2.5 text-[10px] uppercase tracking-widest text-foreground-muted hover:text-white transition-colors">
-                  {t('actions.demo')}
-                </Link>
+                {project.githubUrl && (
+                  <Link href={project.githubUrl} className="group relative px-6 py-2.5 rounded-full border border-brand/40 overflow-hidden flex items-center gap-3">
+                    <div className="absolute inset-0 bg-brand translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                    <span className="relative z-10 text-[10px] uppercase tracking-widest font-bold group-hover:text-background transition-colors">
+                      {t('actions.source')}
+                    </span>
+                  </Link>
+                )}
+                {project.liveUrl && (
+                  <Link href={project.liveUrl} className="px-4 py-2.5 text-[10px] uppercase tracking-widest text-foreground-muted hover:text-white transition-colors">
+                    {t('actions.demo')}
+                  </Link>
+                )}
               </div>
 
               <div className="text-[10px] tracking-[0.2em] uppercase text-foreground-muted font-serif">
@@ -125,7 +128,7 @@ export function ProjectsSection() {
       {/* SECTION CONTENT */}
       <div className="relative">
         {projectsData.map((project: Project, index: number) => (
-          <ProjectItem key={project.id} project={project} index={index} />
+          <ProjectItem key={index} project={project} index={index} />
         ))}
       </div>
     </section>
