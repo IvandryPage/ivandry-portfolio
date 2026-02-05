@@ -43,7 +43,7 @@ export function SiteFooter() {
             </motion.div>
 
             {/* Email Link */}
-            <motion.a href={FOOTER_DATA.email.href} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group flex flex-col w-fit max-w-full">
+            <motion.a href={FOOTER_DATA.email.href} target='_blank' initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="group flex flex-col w-fit max-w-full">
               <span className="text-[9px] uppercase tracking-widest text-foreground-muted mb-3 italic font-serif">
                 {t('cta.inquiry')}
               </span>
@@ -77,6 +77,8 @@ export function SiteFooter() {
                   <motion.a
                     key={social.id}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
