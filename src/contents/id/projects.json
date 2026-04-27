@@ -47,7 +47,7 @@
       "subtitle": "Engine manajemen musik low-level dengan struktur data kustom",
       "concept": "Studi mendalam terhadap fundamental ilmu komputer dengan mengimplementasikan Struktur Data secara murni tanpa pustaka tingkat tinggi. Menggunakan Doubly Linked List untuk manajemen playlist, Stack untuk fungsi 'Undo', dan Queue untuk antrean pemutaran. Proyek ini mendemonstrasikan ketelitian logika dalam mengelola alur data pada lingkungan memori terbatas.",
       "stack": ["C++", "Linked List", "Stack & Queue", "Sorting/Searching"],
-      "imageUrl": "/assets/raifvy.webp",
+      "imageUrl": "/assets/raivfy.webp",
       "githubUrl": "https://github.com/IvandryPage/praktikum-algo-project"
     },
     {
