@@ -10,6 +10,7 @@ export async function constructMetadata(locale: string): Promise<Metadata> {
     : "Professional portfolio of Galang Ivandry, an Information Systems student at UPNVYK and Frontend Developer & Game specializing in creative web architecture and system logic.";
 
   return {
+    metadataBase: new URL("https://ivandrypage.vercel.app"),
     title: {
       default: title,
       template: `%s | Galang Ivandry`

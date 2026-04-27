@@ -18,7 +18,7 @@
       "subtitle": "Knowledge sanctuary with memory-keyed access logic",
       "concept": "A radical departure from conventional digital storage. Chronicle Log replaces visual navigation with a 'Memory-Locked' gateway, where data remains invisible until retrieved via exact taxonomic keys. It is a system designed for absolute privacy, ensuring that information is protected solely by the user’s cognitive recall.",
       "stack": [".NET MAUI", "C#", "SQLite", "Encryption"],
-      "imageUrl": "/assets/null.jpg",
+      "imageUrl": "/assets/chronicle-log.webp",
       "liveUrl": "https://github.com/IvandryPage/chronicle-log/releases/tag/v1.2.0",
       "githubUrl": "https://github.com/IvandryPage/chronicle-log"
     },
@@ -28,7 +28,7 @@
       "subtitle": "A technical journal of C++ evolution and game systems",
       "concept": "A chronological archive documenting the transition from high-level abstractions to low-level mastery. Pixelated serves as a systematic record of deciphering ECS architectures and render loops, preserving the friction of the learning process as a foundational resource for future system development.",
       "stack": ["C++", "SFML", "ECS Architecture"],
-      "imageUrl": "/assets/null.jpg",
+      "imageUrl": "/assets/pixelated.webp",
       "githubUrl": "https://github.com/IvandryPage/pixelated"
     },
     {
@@ -37,7 +37,7 @@
       "subtitle": "Behavioral simulation of academic pressure and imposter syndrome",
       "concept": "A raw, interactive exploration of psychological weight within an academic environment. Built as a terminal-based narrative engine, Recrafted utilizes complex decision branching to simulate the 'logic of emotion.' By stripping away visual distractions, it forces players to navigate the internal dilemmas that define self-worth.",
       "stack": ["C++", "Terminal-UI", "Branching Logic", "Narrative Design"],
-      "imageUrl": "/assets/null.jpg",
+      "imageUrl": "/assets/recrafted.webp",
       "liveUrl": "https://github.com/IvandryPage/recrafted/releases/tag/v1.0.0",
       "githubUrl": "https://github.com/IvandryPage/recrafted"
     },
@@ -47,7 +47,7 @@
       "subtitle": "Low-level music engine built on custom data structures",
       "concept": "A deep dive into fundamental computer science, bypassing standard libraries to implement raw Data Structures. From Doubly Linked Lists for playlist management to Stack-based 'Undo' operations, this project demonstrates the rigorous logic required to manage data flow efficiently within memory-constrained environments.",
       "stack": ["C++", "DSA", "Memory Management"],
-      "imageUrl": "/assets/null.jpg",
+      "imageUrl": "/assets/raivfy.webp",
       "githubUrl": "https://github.com/IvandryPage/praktikum-algo-project"
     },
     {
@@ -56,7 +56,7 @@
       "subtitle": "Database-driven architecture for digital asset commerce",
       "concept": "A functional exploration of the relationship between relational databases and user interfaces. TeraHub serves as a prototype for gaming marketplaces, demonstrating the core logic of CRUD operations and inventory management using PHP and MySQL without the abstraction of modern frameworks.",
       "stack": ["PHP", "MySQL", "Relational DB"],
-      "imageUrl": "/assets/null.jpg",
+      "imageUrl": "/assets/terahub.webp",
       "githubUrl": "https://github.com/IvandryPage/praktikum-web-project"
     },
     {
@@ -65,7 +65,7 @@
       "subtitle": "A real-time disaster information and education portal",
       "concept": "Bridging the gap between raw seismic data and public awareness. Nadi Bumi is an educational platform that integrates real-time data from the BMKG API to provide up-to-date disaster alerts. Built with PHP, the project focuses on transforming complex geological data into an accessible interface, serving as a critical information hub for natural disaster preparedness.",
       "stack": ["PHP", "BMKG API", "JSON Data Parsing", "Web Integration"],
-      "imageUrl": "/assets/projects/nadi-bumi.jpg",
+      "imageUrl": "/assets/nadi-bumi.webp",
       "githubUrl": "https://github.com/IvandryPage/nadi-bumi"
     }
   ]

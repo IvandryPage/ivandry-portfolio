@@ -32,7 +32,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
         <motion.div 
           style={{ 
             scale: imgScale,
-            filter: useTransform(saturation, (s) => `grayscale(${1 - s}) saturate(${s})`),
+            filter: useTransform(saturation, (s) => `grayscale(${1 - s}) saturate(${s}) brightness(0.55)`),
             opacity: imgOpacity
           }}
           className="relative w-full h-full"
@@ -41,10 +41,10 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             src={project.imageUrl || ""} 
             alt={project.title} 
             fill 
-            className="object-cover"
+            className="object-cover bg-center"
             priority={index < 2}
           />
-          <div className="absolute inset-0 bg-background/70" />
+          <div className="absolute inset-0 bg-background/50" />
           <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background" />
         </motion.div>
       </div>

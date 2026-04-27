@@ -42,7 +42,7 @@ export function SiteNavigation() {
         >
           {/* Noise Overlay */}
           {isScrolled && (
-            <div className="absolute inset-0 rounded-full opacity-[0.03] pointer-events-none bg-[url('/noise.svg')]" />
+            <div className="absolute inset-0 rounded-full opacity-[0.03] pointer-events-none" />
           )}
 
           <motion.a href="#" className="text-[10px] tracking-[0.4em] font-bold text-foreground uppercase">
