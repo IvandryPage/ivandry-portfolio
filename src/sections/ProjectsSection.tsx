@@ -43,7 +43,7 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             fill 
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-background/30 md:bg-background/50" />
+          <div className="absolute inset-0 bg-background/30" />
           <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background" />
         </motion.div>
       </div>
