@@ -41,10 +41,9 @@ function ProjectItem({ project, index }: { project: Project; index: number }) {
             src={project.imageUrl || ""} 
             alt={project.title} 
             fill 
-            className="object-cover bg-center"
-            priority={index < 2}
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-background/50" />
+          <div className="absolute inset-0 bg-background/30 md:bg-background/50" />
           <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background" />
         </motion.div>
       </div>
