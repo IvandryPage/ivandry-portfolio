@@ -24,15 +24,21 @@
   "experiences": [
     {
       "period": "2025 — Sekarang",
-      "position": "Frontend Developer",
-      "institution": "Code124",
-      "description": "Merancang lapisan visual dan fungsional untuk platform Code124 serta ekosistem web HIMASISFO. Fokus pada modularitas komponen dan interaksi pengguna yang responsif."
-    },
-    {
-      "period": "2025 — Sekarang",
       "position": "Asisten Laboratorium",
       "institution": "UPN 'Veteran' Yogyakarta",
       "description": "Mentor untuk Dasar Pemrograman, Algoritma & Struktur Data, dan Pemrograman Web. Menjembatani teori algoritma abstrak dengan implementasi perangkat lunak praktis."
+    },
+    {
+      "period": "2026 — Sekarang",
+      "position": "Mentor Frontend Developer",
+      "institution": "Code124",
+      "description": "Membimbing peserta dalam mempelajari fundamental React dari tingkat beginner hingga beginner–intermediate melalui praktik langsung dan project-based learning. Materi mencakup konsep inti seperti component, props, state management, event handling, struktur UI reusable, serta workflow modern dalam pengembangan frontend."
+    },
+    {
+      "period": "2025 — 2026",
+      "position": "Kepala Divisi Frontend Developer",
+      "institution": "Code124",
+      "description": "Merancang lapisan visual dan fungsional untuk platform Code124 serta ekosistem web HIMASISFO. Fokus pada modularitas komponen dan interaksi pengguna yang responsif."
     },
     {
       "period": "2025 — Sekarang",

@@ -24,18 +24,24 @@
   "experiences": [
     {
       "period": "2025 — Present",
-      "position": "Frontend Developer",
-      "institution": "Code124",
-      "description": "Architecting the visual and functional layers for the Code124 platform and official HIMASISFO web ecosystem. Prioritizing component modularity and low-latency user interactions."
-    },
-    {
-      "period": "2025 — Present",
       "position": "Laboratory Assistant",
       "institution": "UPN 'Veteran' Yogyakarta",
       "description": "Mentoring in Programming Fundamentals, Algorithm & Data Structures, and Web Programming. Bridging the gap between abstract algorithmic theory and practical software implementation."
     },
     {
-      "period": "2025 — Present",
+      "period": "2026 — Present",
+      "position": "Mentor of Frontend Developer",
+      "institution": "Code124",
+      "description": "Mentored students in learning React fundamentals, guiding them from beginner to beginner–intermediate level through hands-on projects and practical frontend development exercises. Covered core concepts such as components, props, state management, event handling, reusable UI structures, and modern frontend development workflows."
+    },
+    {
+      "period": "2025 — 2026",
+      "position": "Head Divison of Frontend Developer",
+      "institution": "Code124",
+      "description": "Architecting the visual and functional layers for the Code124 platform and official HIMASISFO web ecosystem. Prioritizing component modularity and low-latency user interactions."
+    },
+    {
+      "period": "2025 — 2026",
       "position": "Academic & Professional Staff",
       "institution": "HIMASISFO UPNVYK",
       "description": "Coordinating strategic educational forums for laboratory assistants. Responsible for technical copywriting and designing educational briefs for Information Systems content, ensuring complex topics are accessible to a wider audience."
